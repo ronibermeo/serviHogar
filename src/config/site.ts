@@ -23,7 +23,7 @@ export type PreguntaFrecuente = {
 };
 
 export const siteConfig = {
-  nombreEmpresa: "ServiHogar Técnico",
+  nombreEmpresa: "Marcatecnicos",
   ciudadPrincipal: "Medellín",
   telefono: "+57 604 589 4021",
   whatsapp: "+57 300 456 7812",

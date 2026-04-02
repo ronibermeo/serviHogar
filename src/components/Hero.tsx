@@ -29,36 +29,17 @@ export function Hero() {
 
   return (
     <section id="inicio" className="scroll-mt-[5.5rem]">
-      <div
-        className={
-          "relative overflow-hidden rounded-[32px] border border-sky-200/60 " +
-          "bg-gradient-to-br from-sky-100/80 via-white to-[#e8f0ff]/90 " +
-          "p-5 shadow-[0_24px_64px_-16px_rgba(29,58,143,0.2)] md:rounded-[44px] md:p-8 lg:p-10"
-        }
-      >
-        <div
-          className="pointer-events-none absolute -right-24 -top-28 h-72 w-72 rounded-full bg-sky-200/35 blur-3xl"
-          aria-hidden
-        />
-        <div
-          className="pointer-events-none absolute -bottom-32 left-10 h-64 w-64 rounded-full bg-[#2f4fb7]/12 blur-3xl"
-          aria-hidden
-        />
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent"
-          aria-hidden
-        />
-
+      <div className="relative pb-2 pt-1 md:pb-4 md:pt-2">
         <div className="relative grid items-center gap-10 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:gap-6 xl:gap-10">
           <div className="relative z-10 flex min-w-0 gap-5 md:gap-7">
             <div className="hidden shrink-0 flex-col items-center pt-1 sm:flex" aria-hidden>
               {pasos.map((_, i) => (
                 <div key={pasos[i].titulo} className="flex flex-col items-center">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-white/90 text-xs font-bold text-[#1d3a8f] shadow-md shadow-sky-400/15">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-slate-200/90 bg-white text-xs font-bold text-[#1d3a8f] shadow-sm shadow-slate-200/60">
                     {i + 1}
                   </span>
                   {i < pasos.length - 1 ? (
-                    <span className="my-1.5 h-10 w-0.5 rounded-full bg-gradient-to-b from-sky-200 to-sky-100" />
+                    <span className="my-1.5 h-10 w-0.5 rounded-full bg-gradient-to-b from-sky-300/80 to-sky-100" />
                   ) : null}
                 </div>
               ))}
@@ -123,8 +104,8 @@ export function Hero() {
           <div className="relative z-10 mx-auto w-full max-w-lg lg:mx-0 lg:max-w-none">
             <div
               className={
-                "relative aspect-[4/3] overflow-hidden rounded-[28px] border border-white/90 bg-slate-100 " +
-                "shadow-[0_20px_50px_-12px_rgba(29,58,143,0.35)] ring-1 ring-slate-200/50 md:aspect-[5/4] lg:aspect-auto lg:min-h-[380px]"
+                "relative aspect-[4/3] overflow-hidden rounded-[28px] border border-slate-200/90 bg-slate-100 " +
+                "shadow-[0_20px_50px_-12px_rgba(29,58,143,0.25)] ring-1 ring-slate-200/40 md:aspect-[5/4] lg:aspect-auto lg:min-h-[380px]"
               }
             >
               <Image
@@ -182,7 +163,7 @@ export function Hero() {
 
         <div
           className={
-            "relative z-10 mt-8 rounded-2xl border border-white/70 bg-white/50 p-3 shadow-inner shadow-sky-100/50 backdrop-blur-sm " +
+            "relative z-10 mt-8 rounded-2xl border border-slate-200/80 bg-slate-50/60 p-3 shadow-sm shadow-slate-200/40 " +
             "md:mt-10 md:rounded-3xl md:p-5"
           }
         >

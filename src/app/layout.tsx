@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Inter, Manrope, Playfair_Display } from "next/font/google";
+import { siteConfig } from "@/config/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -10,6 +11,12 @@ const inter = Inter({
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -30,7 +37,7 @@ export const metadata: Metadata = {
       "Agenda tu visita tecnica por WhatsApp o formulario. Atencion a domicilio con tecnicos certificados.",
     type: "website",
     locale: "es_CO",
-    siteName: "ServiHogar Tecnico",
+    siteName: siteConfig.nombreEmpresa,
   },
   twitter: {
     card: "summary_large_image",
@@ -48,7 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${inter.variable} ${manrope.variable} h-full scroll-smooth antialiased`}
+      className={`${inter.variable} ${manrope.variable} ${playfair.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

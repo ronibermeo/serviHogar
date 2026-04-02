@@ -7,9 +7,13 @@
 export const whatsappSolidButton =
   "bg-[#25D366] font-semibold text-white shadow-sm shadow-black/10 transition hover:bg-[#128C7E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/40";
 
-/** Botón flotante circular: solo icono, mismo verde de marca. */
+/** Botón flotante circular WhatsApp (posición: usar contenedor `FloatingContactButtons`). */
 export const whatsappFabButton =
-  "fixed bottom-4 right-4 z-50 inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-black/20 transition hover:bg-[#128C7E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/40 focus-visible:ring-offset-2 md:bottom-6 md:right-6";
+  "inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white transition hover:bg-[#128C7E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/40 focus-visible:ring-offset-2";
+
+/** Botón flotante circular para llamada (misma talla que WhatsApp). */
+export const phoneFabButton =
+  "inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#2f4fb7] text-white transition hover:bg-[#243d8f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2f4fb7]/40 focus-visible:ring-offset-2";
 
 /** Enlace de texto que abre WhatsApp (p. ej. tarjetas sin botón sólido). */
 export const whatsappTextLink =

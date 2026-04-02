@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ServiceItem } from "@/config/site";
 import { siteConfig } from "@/config/site";
 import { serviceImageById } from "@/config/serviceImages";
+import { BrandsStrip } from "@/components/BrandsStrip";
 import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
 import { whatsappSolidButton } from "@/config/whatsappUi";
 
@@ -14,18 +15,6 @@ function IconBolt({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.75} stroke="currentColor" aria-hidden>
       <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5 10.5 4.5l2.25 6 6.75 1.5-6.75 9-2.25-6-6.75-1.5z" />
-    </svg>
-  );
-}
-
-function IconHome({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.75} stroke="currentColor" aria-hidden>
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-      />
     </svg>
   );
 }
@@ -173,10 +162,10 @@ export function ServiceSingleContent({ servicio }: ServiceSingleContentProps) {
   )}`;
 
   return (
-    <div className="bg-gradient-to-b from-[#bfd4ff] via-[#dce8ff] to-[#e8effc] px-3 py-6 md:px-6 md:py-10">
-      <div className="mx-auto max-w-7xl rounded-[32px] border border-white/70 bg-white/90 p-3 shadow-[0_28px_80px_-24px_rgba(29,58,143,0.28)] backdrop-blur-sm md:rounded-[40px] md:p-4">
-        <div className="overflow-hidden rounded-[28px] border border-white/80 bg-white md:rounded-[32px]">
-          <div className="bg-white px-2 pt-2 md:px-3 md:pt-3">
+    <div className="bg-transparent px-0 py-0 md:px-6 md:py-10">
+      <div className="mx-auto w-full max-w-7xl rounded-none border-0 bg-transparent p-0 shadow-none">
+        <div className="overflow-visible rounded-none border-0 bg-transparent">
+          <div className="bg-transparent px-4 pt-4 md:px-3 md:pt-3">
             <nav
               aria-label="Ruta"
               className="mb-4 hidden flex-wrap items-center gap-x-2 gap-y-1 px-1 text-[13px] text-slate-500 md:flex md:px-2"
@@ -196,9 +185,8 @@ export function ServiceSingleContent({ servicio }: ServiceSingleContentProps) {
               <span className="font-medium text-slate-600">{servicio.nombre}</span>
             </nav>
 
-            {/* Vista móvil: estilo app (tarjetas redondeadas, banner oscuro, acciones rápidas) */}
-            <div className="md:hidden">
-              <div className="rounded-[28px] bg-slate-100/90 p-4 shadow-inner shadow-slate-200/60">
+            {/* Vista móvil: ancho completo sobre fondo blanco (sin marco vidrio extra) */}
+            <div className="md:hidden space-y-5">
                 <h1 className="text-balance text-[1.65rem] font-black leading-[1.15] tracking-tight text-slate-900">
                   ¿Necesitas técnico para tu {servicio.nombre.toLowerCase()}?
                 </h1>
@@ -353,40 +341,19 @@ export function ServiceSingleContent({ servicio }: ServiceSingleContentProps) {
                       ))}
                   </div>
                 </div>
-              </div>
             </div>
 
             <div className="hidden md:block">
-            <div
-              className={
-                "relative overflow-hidden rounded-[32px] border border-sky-200/60 " +
-                "bg-gradient-to-br from-sky-100/80 via-white to-[#e8f0ff]/90 " +
-                "p-5 shadow-[0_24px_64px_-16px_rgba(29,58,143,0.2)] md:rounded-[44px] md:p-8 lg:p-10"
-              }
-            >
-              <div
-                className="pointer-events-none absolute -right-24 -top-28 h-72 w-72 rounded-full bg-sky-200/35 blur-3xl"
-                aria-hidden
-              />
-              <div
-                className="pointer-events-none absolute -bottom-32 left-10 h-64 w-64 rounded-full bg-[#2f4fb7]/12 blur-3xl"
-                aria-hidden
-              />
-              <div
-                className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent"
-                aria-hidden
-              />
-
-              <div className="relative grid items-center gap-10 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:gap-6 xl:gap-10">
+              <div className="relative grid items-center gap-10 pb-6 pt-2 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:gap-6 xl:gap-10 md:pb-10 md:pt-4">
                 <div className="relative z-10 flex min-w-0 gap-5 md:gap-7">
                   <div className="hidden shrink-0 flex-col items-center pt-1 sm:flex" aria-hidden>
                     {pasosHero.map((p, i) => (
                       <div key={p.titulo} className="flex flex-col items-center">
-                        <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-white/90 text-xs font-bold text-[#1d3a8f] shadow-md shadow-sky-400/15">
+                        <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-slate-200/90 bg-white text-xs font-bold text-[#1d3a8f] shadow-sm shadow-slate-200/60">
                           {i + 1}
                         </span>
                         {i < pasosHero.length - 1 ? (
-                          <span className="my-1.5 h-10 w-0.5 rounded-full bg-gradient-to-b from-sky-200 to-sky-100" />
+                          <span className="my-1.5 h-10 w-0.5 rounded-full bg-gradient-to-b from-sky-300/80 to-sky-100" />
                         ) : null}
                       </div>
                     ))}
@@ -400,13 +367,6 @@ export function ServiceSingleContent({ servicio }: ServiceSingleContentProps) {
                     <h1 className="text-balance text-4xl font-black tracking-tight text-slate-900 md:text-5xl lg:text-[3.05rem] lg:leading-[1.08]">
                       {servicio.detalleTitulo}
                     </h1>
-
-                    <p className="max-w-xl text-lg leading-relaxed text-slate-600">{servicio.detalleDescripcion}</p>
-
-                    <p className="flex gap-3 rounded-2xl border border-[#2f4fb7]/15 bg-gradient-to-br from-[#f4f6ff] to-white px-4 py-3.5 text-[15px] leading-snug text-slate-700">
-                      <IconBolt className="mt-0.5 h-5 w-5 shrink-0 text-[#2f4fb7]" />
-                      <span>{servicio.intencion}</span>
-                    </p>
 
                     <ul className="space-y-2.5 sm:hidden">
                       {pasosHero.map((p) => (
@@ -456,25 +416,14 @@ export function ServiceSingleContent({ servicio }: ServiceSingleContentProps) {
                         </span>
                       </div>
                     </div>
-
-                    <ul className="flex flex-col gap-2 border-t border-sky-200/50 pt-4 sm:flex-row sm:flex-wrap sm:gap-x-8 sm:gap-y-2">
-                      <li className="flex items-center gap-2 text-sm text-slate-600">
-                        <IconHome className="h-4 w-4 shrink-0 text-[#2f4fb7]" />
-                        Domicilio en {siteConfig.cobertura}
-                      </li>
-                      <li className="flex items-center gap-2 text-sm text-slate-600">
-                        <IconShield className="h-4 w-4 shrink-0 text-[#2f4fb7]" />
-                        Diagnóstico claro y garantía por escrito
-                      </li>
-                    </ul>
                   </div>
                 </div>
 
                 <div className="relative z-10 mx-auto w-full max-w-lg lg:mx-0 lg:max-w-none">
                   <div
                     className={
-                      "relative aspect-[4/3] overflow-hidden rounded-[28px] border border-white/90 bg-slate-100 " +
-                      "shadow-[0_20px_50px_-12px_rgba(29,58,143,0.35)] ring-1 ring-slate-200/50 md:aspect-[5/4] lg:aspect-auto lg:min-h-[380px]"
+                      "relative aspect-[4/3] overflow-hidden rounded-[28px] border border-slate-200/90 bg-slate-100 " +
+                      "shadow-[0_20px_50px_-12px_rgba(29,58,143,0.25)] ring-1 ring-slate-200/40 md:aspect-[5/4] lg:aspect-auto lg:min-h-[380px]"
                     }
                   >
                     <Image
@@ -532,10 +481,11 @@ export function ServiceSingleContent({ servicio }: ServiceSingleContentProps) {
                 </div>
               </div>
             </div>
-            </div>
           </div>
 
-          <div className="mx-auto max-w-6xl px-3 pb-16 pt-2 md:px-5 md:pb-20 md:pt-4">
+          <BrandsStrip />
+
+          <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 md:px-5 md:pb-20 md:pt-4">
             <section className="mt-8 md:mt-10" aria-labelledby="fallas-heading">
               <div className="rounded-[28px] border border-sky-100/90 bg-gradient-to-b from-white via-sky-50/30 to-[#f0f6ff]/80 p-6 shadow-sm shadow-sky-100/50 md:p-8">
             <div className="max-w-2xl">
