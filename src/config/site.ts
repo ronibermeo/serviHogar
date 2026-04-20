@@ -1,4 +1,4 @@
-export type ServiceItem = {
+﻿export type ServiceItem = {
   id: string;
   nombre: string;
   resumen: string;
@@ -24,49 +24,49 @@ export type PreguntaFrecuente = {
 
 export const siteConfig = {
   nombreEmpresa: "Marcatecnicos",
-  ciudadPrincipal: "Medellín",
-  telefono: "+57 604 589 4021",
+  ciudadPrincipal: "Cali",
+  telefono: "+57 602 589 4021",
   whatsapp: "+57 300 456 7812",
   horario: "Lunes a sábado de 7:00 a.m. a 7:00 p.m.",
   /** Etiqueta corta para UI compacta (p. ej. tarjetas en móvil). */
   horarioCorto: "Lun–sáb · 7–19 h",
-  cobertura: "Medellín y área metropolitana",
-  direccion: "Cra. 43A #8 Sur-15, El Poblado, Medellín",
+  cobertura: "Cali y municipios cercanos",
+  direccion: "Av. 6N #23N-45, Granada, Cali",
   email: "agenda@servihogartecnico.com",
   descripcionCorta:
     "Servicio técnico de electrodomésticos a domicilio con atención rápida, diagnóstico preciso y garantía por escrito.",
   coberturaZonas: [
-    "El Poblado",
-    "Laureles - Estadio",
-    "Belén",
-    "La América",
-    "Robledo",
-    "Castilla",
-    "Manrique",
-    "Aranjuez",
-    "Buenos Aires",
-    "Guayabal",
-    "Itagüí",
-    "Envigado",
-    "Sabaneta",
-    "Bello",
-    "Copacabana",
+    "Granada",
+    "San Fernando",
+    "Ciudad Jardín",
+    "Valle del Lili",
+    "El Ingenio",
+    "Caney",
+    "Pance",
+    "Tequendama",
+    "Santa Mónica",
+    "Versalles",
+    "Chipichape",
+    "Normandía",
+    "Jamundí",
+    "Yumbo",
+    "Palmira",
   ],
   servicios: [
     {
       id: "neveras",
       nombre: "Neveras",
       resumen: "Diagnóstico y reparación de neveras a domicilio.",
-      intencion: "Reparación de neveras a domicilio en Medellín.",
+      intencion: "Reparación de neveras a domicilio en Cali.",
       cta: "Agendar revisión",
-      detalleTitulo: "Reparación de neveras en Medellín",
+      detalleTitulo: "Reparación de neveras en Cali",
       detalleDescripcion:
         "Atendemos neveras que no enfrían, presentan escarcha excesiva, fugas de agua o ruido irregular. Nuestro técnico revisa sistema de enfriamiento, sensores y tarjeta electrónica en casa.",
       fallasComunes: ["No enfría", "Escarcha excesiva", "Goteo interno", "Ruido constante"],
       soluciones:
         "Reparación de componentes, mantenimiento preventivo y cambio de piezas compatibles con garantía.",
       seoLocal:
-        "Si buscas servicio técnico de neveras en Medellín, agenda una visita rápida con diagnóstico claro y solución en el menor tiempo posible.",
+        "Si buscas servicio técnico de neveras en Cali, agenda una visita rápida con diagnóstico claro y solución en el menor tiempo posible.",
     },
     {
       id: "nevecones",
@@ -81,7 +81,7 @@ export const siteConfig = {
       soluciones:
         "Ajuste de sensores, limpieza técnica, corrección de sellos y reparación electrónica.",
       seoLocal:
-        "Nuestro equipo realiza reparación de nevecones en Medellín con atención puntual y explicación técnica sencilla para el cliente.",
+        "Nuestro equipo realiza reparación de nevecones en Cali con atención puntual y explicación técnica sencilla para el cliente.",
     },
     {
       id: "congeladores",
@@ -89,14 +89,14 @@ export const siteConfig = {
       resumen: "Reparación y mantenimiento de congeladores verticales y horizontales.",
       intencion: "Mantén cadena de frío segura para hogar, negocio o emprendimiento.",
       cta: "Agendar revisión",
-      detalleTitulo: "Reparación de congeladores en Medellín",
+      detalleTitulo: "Reparación de congeladores en Cali",
       detalleDescripcion:
         "Atendemos congeladores que no congelan, trabajan de forma intermitente o consumen energía en exceso. Verificamos compresor, termostato y estado del aislamiento.",
       fallasComunes: ["No congela", "Arranca y se apaga", "Consumo alto", "Hielo irregular"],
       soluciones:
         "Diagnóstico preciso, mantenimiento de rendimiento y reparación técnica con repuestos confiables.",
       seoLocal:
-        "Solicita servicio técnico para congeladores en Medellín y recibe soporte profesional en tu domicilio o local.",
+        "Solicita servicio técnico para congeladores en Cali y recibe soporte profesional en tu domicilio o local.",
     },
     {
       id: "estufas",
@@ -111,7 +111,7 @@ export const siteConfig = {
       soluciones:
         "Ajustes de seguridad, mantenimiento profundo e instalación de componentes certificados.",
       seoLocal:
-        "Brindamos reparación de estufas en Medellín con enfoque en seguridad y funcionamiento estable.",
+        "Brindamos reparación de estufas en Cali con enfoque en seguridad y funcionamiento estable.",
     },
     {
       id: "hornos",
@@ -119,14 +119,14 @@ export const siteConfig = {
       resumen: "Revisión y reparación de hornos empotrables y convencionales.",
       intencion: "Recupera temperatura exacta y cocción pareja.",
       cta: "Agendar revisión",
-      detalleTitulo: "Servicio técnico de hornos en Medellín",
+      detalleTitulo: "Servicio técnico de hornos en Cali",
       detalleDescripcion:
         "Si tu horno no calienta, quema los alimentos o tarda en alcanzar temperatura, realizamos diagnóstico integral de resistencia, termostato y control electrónico.",
       fallasComunes: ["No calienta", "Temperatura inestable", "Puerta no sella", "Apagado repentino"],
       soluciones:
         "Reparación, calibración térmica y mantenimiento preventivo para prolongar la vida útil del equipo.",
       seoLocal:
-        "Agenda reparación de hornos a domicilio en Medellín con atención clara, profesional y garantizada.",
+        "Agenda reparación de hornos a domicilio en Cali con atención clara, profesional y garantizada.",
     },
     {
       id: "microondas",
@@ -141,7 +141,7 @@ export const siteConfig = {
       soluciones:
         "Mantenimiento, reparación de módulos y recomendaciones de uso seguro para evitar daños recurrentes.",
       seoLocal:
-        "Si necesitas reparación de microondas en Medellín, contamos con técnicos capacitados y agenda ágil.",
+        "Si necesitas reparación de microondas en Cali, contamos con técnicos capacitados y agenda ágil.",
     },
     {
       id: "campanas-extractoras",
@@ -156,7 +156,7 @@ export const siteConfig = {
       soluciones:
         "Mantenimiento, reparación del sistema de ventilación e instalación correcta del equipo.",
       seoLocal:
-        "Atendemos campanas extractoras en Medellín con soporte a domicilio y servicio puntual.",
+        "Atendemos campanas extractoras en Cali con soporte a domicilio y servicio puntual.",
     },
     {
       id: "freidoras-de-aire",
@@ -164,14 +164,14 @@ export const siteConfig = {
       resumen: "Reparación técnica para freidoras de aire domésticas.",
       intencion: "Recupera potencia térmica y tiempos de cocción estables.",
       cta: "Agendar revisión",
-      detalleTitulo: "Reparación de freidoras de aire en Medellín",
+      detalleTitulo: "Reparación de freidoras de aire en Cali",
       detalleDescripcion:
         "Diagnosticamos freidoras que no encienden, no calientan correctamente o muestran errores en pantalla. Revisamos resistencias, ventilación y panel digital.",
       fallasComunes: ["No enciende", "No calienta", "Error en panel", "Apagado automático"],
       soluciones:
         "Mantenimiento interno y reparación de componentes para uso seguro y continuo.",
       seoLocal:
-        "Ofrecemos servicio técnico de freidoras de aire en Medellín con atención rápida y garantía.",
+        "Ofrecemos servicio técnico de freidoras de aire en Cali con atención rápida y garantía.",
     },
     {
       id: "dispensadores-de-agua",
@@ -186,7 +186,7 @@ export const siteConfig = {
       soluciones:
         "Reparación funcional, mantenimiento preventivo e instalación de repuestos compatibles.",
       seoLocal:
-        "Solicita reparación de dispensadores de agua en Medellín y recibe asistencia confiable a domicilio.",
+        "Solicita reparación de dispensadores de agua en Cali y recibe asistencia confiable a domicilio.",
     },
     {
       id: "lavavajillas",
@@ -194,14 +194,14 @@ export const siteConfig = {
       resumen: "Revisión de ciclos, drenaje y limpieza técnica de lavavajillas.",
       intencion: "Evita ciclos incompletos y prolonga la vida útil del equipo.",
       cta: "Ver servicio",
-      detalleTitulo: "Reparación de lavavajillas en Medellín",
+      detalleTitulo: "Reparación de lavavajillas en Cali",
       detalleDescripcion:
         "Atendemos lavavajillas que no drenan, dejan residuos, generan malos olores o muestran errores de ciclo. Verificamos bomba, sensores y sistema de carga de agua.",
       fallasComunes: ["No drena", "No lava bien", "Error de ciclo", "Mal olor"],
       soluciones:
         "Mantenimiento correctivo, limpieza profunda y reparación de módulos hidráulicos/electrónicos.",
       seoLocal:
-        "Nuestro servicio técnico de lavavajillas en Medellín mejora rendimiento y reduce fallas repetitivas.",
+        "Nuestro servicio técnico de lavavajillas en Cali mejora rendimiento y reduce fallas repetitivas.",
     },
     {
       id: "lavadoras",
@@ -216,7 +216,7 @@ export const siteConfig = {
       soluciones:
         "Reparación en domicilio, mantenimiento preventivo y ajuste de niveles para uso estable.",
       seoLocal:
-        "Si necesitas reparación de lavadoras a domicilio en Medellín, agenda hoy y te confirmamos por WhatsApp.",
+        "Si necesitas reparación de lavadoras a domicilio en Cali, agenda hoy y te confirmamos por WhatsApp.",
     },
     {
       id: "secadoras",
@@ -224,14 +224,14 @@ export const siteConfig = {
       resumen: "Mantenimiento y reparación de secadoras eléctricas y de gas.",
       intencion: "Recupera secado eficiente y reduce tiempos de ciclo.",
       cta: "Solicitar técnico",
-      detalleTitulo: "Reparación de secadoras en Medellín",
+      detalleTitulo: "Reparación de secadoras en Cali",
       detalleDescripcion:
         "Resolvemos secadoras que no calientan, tardan en secar o presentan ruidos. Verificamos sistema térmico, sensores de humedad y flujo de aire.",
       fallasComunes: ["No calienta", "Secado lento", "Ruido en giro", "Se apaga sola"],
       soluciones:
         "Limpieza técnica, reparación de partes críticas y mejora de rendimiento energético.",
       seoLocal:
-        "Brindamos servicio técnico para secadoras en Medellín con visita domiciliaria y garantía.",
+        "Brindamos servicio técnico para secadoras en Cali con visita domiciliaria y garantía.",
     },
     {
       id: "calentadores",
@@ -246,7 +246,7 @@ export const siteConfig = {
       soluciones:
         "Instalación, mantenimiento preventivo y reparación con protocolos de seguridad.",
       seoLocal:
-        "Ofrecemos instalación de calentadores y soporte técnico en Medellín para hogares y apartamentos.",
+        "Ofrecemos instalación de calentadores y soporte técnico en Cali para hogares y apartamentos.",
     },
     {
       id: "aire-acondicionado",
@@ -254,14 +254,14 @@ export const siteConfig = {
       resumen: "Revisión, mantenimiento e instalación de aire acondicionado.",
       intencion: "Mejora confort térmico y eficiencia del equipo.",
       cta: "Agendar mantenimiento",
-      detalleTitulo: "Mantenimiento de aire acondicionado en Medellín",
+      detalleTitulo: "Mantenimiento de aire acondicionado en Cali",
       detalleDescripcion:
         "Realizamos limpieza de serpentines, verificación de presión, revisión eléctrica e instalación de equipos nuevos según área y necesidad de uso.",
       fallasComunes: ["No enfría bien", "Goteo", "Ruido", "Olor desagradable"],
       soluciones:
         "Mantenimiento preventivo, reparación y montaje técnico con pruebas de funcionamiento.",
       seoLocal:
-        "Agenda mantenimiento de aire acondicionado en Medellín para asegurar frío constante y menor consumo.",
+        "Agenda mantenimiento de aire acondicionado en Cali para asegurar frío constante y menor consumo.",
     },
     {
       id: "televisores",
@@ -269,44 +269,44 @@ export const siteConfig = {
       resumen: "Servicio técnico para televisores Smart TV y convencionales.",
       intencion: "Resuelve fallas de imagen, sonido y encendido sin complicaciones.",
       cta: "Ver servicio",
-      detalleTitulo: "Reparación de televisores en Medellín",
+      detalleTitulo: "Reparación de televisores en Cali",
       detalleDescripcion:
         "Revisamos televisores con pantalla sin imagen, audio defectuoso o apagado repentino. Evaluamos fuente de poder, placa principal y conectividad.",
       fallasComunes: ["Sin imagen", "Sin sonido", "No enciende", "Reinicios frecuentes"],
       soluciones:
         "Diagnóstico electrónico, reparación de módulos y ajuste de configuración del sistema.",
       seoLocal:
-        "Nuestro servicio de reparación de televisores en Medellín brinda atención clara y resultados confiables.",
+        "Nuestro servicio de reparación de televisores en Cali brinda atención clara y resultados confiables.",
     },
   ] as ServiceItem[],
   testimonios: [
     {
       nombre: "María Fernanda Gómez",
-      zona: "Laureles",
+      zona: "Granada",
       comentario:
         "Agendé por WhatsApp en la mañana y en la tarde ya estaban revisando la lavadora. Fueron puntuales, explicaron todo y la dejaron funcionando el mismo día.",
     },
     {
       nombre: "Julián Restrepo",
-      zona: "Envigado",
+      zona: "San Fernando",
       comentario:
         "Tenía problema con la nevera desde hace días. Me gustó que hicieron diagnóstico claro, precio transparente y cumplieron con la garantía.",
     },
     {
       nombre: "Carolina Mejía",
-      zona: "Belén",
+      zona: "Ciudad Jardín",
       comentario:
         "Excelente atención. El técnico revisó el aire acondicionado, hizo mantenimiento completo y me dio recomendaciones para alargar la vida útil.",
     },
     {
       nombre: "Andrés Castaño",
-      zona: "Sabaneta",
+      zona: "Valle del Lili",
       comentario:
         "Servicio muy ordenado y amable. Repararon el horno de mi apartamento y dejaron todo probado antes de retirarse.",
     },
     {
       nombre: "Paula Londoño",
-      zona: "El Poblado",
+      zona: "El Ingenio",
       comentario:
         "Me ayudaron con un televisor que no prendía. La comunicación fue rápida y me confirmaron cada paso por WhatsApp.",
     },
@@ -315,7 +315,7 @@ export const siteConfig = {
     {
       pregunta: "¿Atienden a domicilio?",
       respuesta:
-        "Sí. Nuestro servicio es principalmente a domicilio en Medellín y zona metropolitana. Coordinamos la visita según disponibilidad y tipo de equipo.",
+        "Sí. Nuestro servicio es principalmente a domicilio en Cali y municipios cercanos. Coordinamos la visita según disponibilidad y tipo de equipo.",
     },
     {
       pregunta: "¿Qué servicios ofrecen?",

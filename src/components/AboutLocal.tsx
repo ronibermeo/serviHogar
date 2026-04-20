@@ -64,7 +64,7 @@ export function AboutLocal() {
           <div className="relative order-1 lg:order-2">
             <div className="relative overflow-hidden rounded-3xl shadow-xl ring-1 ring-slate-200/80">
               <Image
-                src="/img/hero-medellin.jpg"
+                src="/img/califondo.jpg"
                 alt={`${siteConfig.nombreEmpresa} en ${siteConfig.ciudadPrincipal}: servicio técnico local`}
                 width={640}
                 height={480}

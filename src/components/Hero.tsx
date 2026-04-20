@@ -4,7 +4,7 @@ import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
 import { siteConfig } from "@/config/site";
 import { whatsappSolidButton } from "@/config/whatsappUi";
 
-const HERO_IMAGE = "/img/hero-medellin.jpg";
+const HERO_IMAGE = "/img/califondo.jpg";
 
 const pasos = [
   { titulo: "Nos escribes o llamas", desc: "Cuéntanos el equipo y la falla." },

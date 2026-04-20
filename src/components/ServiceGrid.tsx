@@ -3,17 +3,17 @@ import Link from "next/link";
 import { serviceImageById } from "@/config/serviceImages";
 import { siteConfig } from "@/config/site";
 
-const MEDELLIN_HERO = "/img/hero-medellin.jpg";
+const CITY_HERO = "/img/califondo.jpg";
 
 export function ServiceGrid() {
   return (
     <section id="servicios" className="scroll-mt-24 py-14 md:py-16">
       <div className="overflow-hidden rounded-[36px] border border-slate-200/90 bg-slate-950 shadow-[0_32px_80px_-28px_rgba(15,23,42,0.35)] md:rounded-[44px]">
-        {/* Banda hero: Medellín a gran formato */}
+        {/* Banda hero local a gran formato */}
         <div className="relative min-h-[min(58vw,320px)] sm:min-h-[340px] md:min-h-[400px] lg:min-h-[440px]">
           <Image
-            src={MEDELLIN_HERO}
-            alt={`Servicio técnico a domicilio en ${siteConfig.ciudadPrincipal} y área metropolitana`}
+            src={CITY_HERO}
+            alt={`Servicio técnico a domicilio en ${siteConfig.ciudadPrincipal} y municipios cercanos`}
             fill
             className="object-cover object-center"
             sizes="(max-width: 1280px) 100vw, 1280px"
@@ -27,7 +27,7 @@ export function ServiceGrid() {
 
           <div className="relative z-10 flex h-full min-h-[inherit] flex-col justify-end px-6 pb-10 pt-24 md:px-12 md:pb-12 md:pt-32 lg:px-14 lg:pb-14">
             <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-white/75">
-              {siteConfig.ciudadPrincipal} · área metropolitana
+              {siteConfig.ciudadPrincipal} · municipios cercanos
             </p>
             <h2
               className="mt-3 max-w-3xl text-balance font-[family-name:var(--font-playfair)] text-[2rem] font-semibold leading-[1.12] tracking-tight text-white md:text-5xl md:leading-[1.08] lg:text-[3.25rem]"
