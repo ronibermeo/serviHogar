@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { navItems, siteConfig } from "@/config/site";
 import { serviceImageById } from "@/config/serviceImages";
 import { whatsappSolidButton } from "@/config/whatsappUi";
@@ -144,7 +145,8 @@ export function Header() {
             </ul>
           </nav>
 
-          <div className="hidden shrink-0 items-center md:flex">
+          <div className="hidden shrink-0 items-center gap-2 md:flex">
+            <ThemeToggle />
             <a
               href={whatsappHref}
               target="_blank"
@@ -154,6 +156,10 @@ export function Header() {
               <WhatsAppGlyph className="h-4 w-4 opacity-95" />
               WhatsApp
             </a>
+          </div>
+
+          <div className="md:hidden">
+            <ThemeToggle />
           </div>
 
           <button

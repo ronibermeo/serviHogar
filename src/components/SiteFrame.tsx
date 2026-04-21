@@ -1,5 +1,6 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { ContactConversionTracker } from "@/components/ContactConversionTracker";
 import { FloatingContactButtons } from "@/components/FloatingContactButtons";
 
 type SiteFrameProps = {
@@ -9,6 +10,7 @@ type SiteFrameProps = {
 export function SiteFrame({ children }: SiteFrameProps) {
   return (
     <>
+      <ContactConversionTracker />
       <Header />
       <main>{children}</main>
       <Footer />

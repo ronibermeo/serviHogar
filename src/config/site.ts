@@ -25,11 +25,11 @@ export type PreguntaFrecuente = {
 export const siteConfig = {
   nombreEmpresa: "Marcatecnicos",
   ciudadPrincipal: "Cali",
-  telefono: "+57 602 589 4021",
-  whatsapp: "+57 300 456 7812",
-  horario: "Lunes a sábado de 7:00 a.m. a 7:00 p.m.",
+  telefono: "3180771016",
+  whatsapp: "3180771016",
+  horario: "Lunes a sábado de 7:30 a.m. a 5:30 p.m.",
   /** Etiqueta corta para UI compacta (p. ej. tarjetas en móvil). */
-  horarioCorto: "Lun–sáb · 7–19 h",
+  horarioCorto: "Lun–sáb · 7:30–17:30",
   cobertura: "Cali y municipios cercanos",
   direccion: "Av. 6N #23N-45, Granada, Cali",
   email: "agenda@servihogartecnico.com",

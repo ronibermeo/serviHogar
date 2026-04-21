@@ -21,7 +21,7 @@ export default function Home() {
       addressCountry: "CO",
     },
     areaServed: siteConfig.cobertura,
-    openingHours: "Mo-Sa 07:00-19:00",
+    openingHours: "Mo-Sa 07:30-17:30",
   };
 
   const serviceSchema = {

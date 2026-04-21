@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Manrope, Playfair_Display } from "next/font/google";
+import Script from "next/script";
+import { googleAdsAwId, isGoogleAdsEnabled } from "@/lib/analytics";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 
@@ -18,6 +20,20 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["600", "700"],
 });
+
+const themeInitScript = `
+(() => {
+  try {
+    const key = "theme-preference";
+    const stored = window.localStorage.getItem(key);
+    const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const nextTheme = stored === "light" || stored === "dark" ? stored : preferredDark ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", nextTheme);
+  } catch {
+    document.documentElement.setAttribute("data-theme", "light");
+  }
+})();
+`;
 
 export const metadata: Metadata = {
   title: "Servicio tecnico de electrodomesticos a domicilio en Medellin | ServiHogar Tecnico",
@@ -56,8 +72,32 @@ export default function RootLayout({
     <html
       lang="es"
       className={`${inter.variable} ${manrope.variable} ${playfair.variable} h-full scroll-smooth antialiased`}
+      data-theme="light"
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeInitScript}
+        </Script>
+        {isGoogleAdsEnabled ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsAwId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-ads-gtag" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', '${googleAdsAwId}');
+              `}
+            </Script>
+          </>
+        ) : null}
+        {children}
+      </body>
     </html>
   );
 }
