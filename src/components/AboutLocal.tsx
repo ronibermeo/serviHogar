@@ -10,7 +10,7 @@ export function AboutLocal() {
 
   return (
     <section id="nosotros" className="scroll-mt-24 bg-white py-12 md:py-14">
-      <div className="rounded-[28px] border border-slate-100 bg-gradient-to-br from-slate-50 via-white to-[#eef2ff]/40 p-6 md:p-10">
+      <div className="about-local-surface rounded-[28px] border border-slate-100 bg-gradient-to-br from-slate-50 via-white to-[#eef2ff]/40 p-6 md:p-10">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <div className="order-2 lg:order-1">
             <p className="text-sm font-semibold uppercase tracking-wide text-[#2f4fb7]">

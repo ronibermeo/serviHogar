@@ -93,7 +93,7 @@ function IconChat(props: { className?: string }) {
 export function TrustSection() {
   return (
     <section className="bg-white py-12 md:py-14">
-      <div className="rounded-[28px] border border-slate-100 bg-gradient-to-b from-slate-50 to-white p-6 shadow-inner shadow-slate-200/40 md:p-10">
+      <div className="trust-surface rounded-[28px] border border-slate-100 bg-gradient-to-b from-slate-50 to-white p-6 shadow-inner shadow-slate-200/40 md:p-10">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-[#2f4fb7]">

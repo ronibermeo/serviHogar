@@ -55,6 +55,18 @@ html[data-theme="dark"] .border-slate-100 {
   border-color: #334155 !important;
 }
 
+html[data-theme="dark"] .services-grid-surface {
+  background-image: linear-gradient(to bottom, #0b1220, #020617) !important;
+}
+
+html[data-theme="dark"] .trust-surface {
+  background-image: linear-gradient(to bottom, #0f172a, #020617) !important;
+}
+
+html[data-theme="dark"] .about-local-surface {
+  background-image: linear-gradient(135deg, #0f172a, #020617, #172554) !important;
+}
+
 h1,
 h2,
 h3,

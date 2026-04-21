@@ -32,7 +32,7 @@ export function ServiceGrid() {
             <h2
               className="mt-3 max-w-3xl text-balance font-[family-name:var(--font-playfair)] text-[2rem] font-semibold leading-[1.12] tracking-tight text-white md:text-5xl md:leading-[1.08] lg:text-[3.25rem]"
             >
-              Servicio técnico con la ciudad como telón de fondo
+              Tu hogar no se detiene: reparamos hoy con atención técnica confiable
             </h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-white/88 md:text-lg">
               Visitas a domicilio coordinadas, diagnóstico claro y soluciones profesionales para tu hogar en{" "}
@@ -56,7 +56,7 @@ export function ServiceGrid() {
         </div>
 
         {/* Cuadrícula de servicios */}
-        <div className="border-t border-white/10 bg-gradient-to-b from-slate-100 to-white px-5 py-10 md:px-10 md:py-14 lg:px-12">
+        <div className="services-grid-surface border-t border-white/10 bg-gradient-to-b from-slate-100 to-white px-5 py-10 md:px-10 md:py-14 lg:px-12">
           <header className="mx-auto max-w-3xl text-center">
             <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#2f4fb7]">
               Catálogo de servicios
