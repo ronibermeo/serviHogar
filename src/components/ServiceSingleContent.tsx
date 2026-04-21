@@ -487,7 +487,7 @@ export function ServiceSingleContent({ servicio }: ServiceSingleContentProps) {
 
           <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 md:px-5 md:pb-20 md:pt-4">
             <section className="mt-8 md:mt-10" aria-labelledby="fallas-heading">
-              <div className="rounded-[28px] border border-sky-100/90 bg-gradient-to-b from-white via-sky-50/30 to-[#f0f6ff]/80 p-6 shadow-sm shadow-sky-100/50 md:p-8">
+              <div className="service-failures-surface rounded-[28px] border border-sky-100/90 bg-gradient-to-b from-white via-sky-50/30 to-[#f0f6ff]/80 p-6 shadow-sm shadow-sky-100/50 md:p-8">
             <div className="max-w-2xl">
               <h2
                 id="fallas-heading"

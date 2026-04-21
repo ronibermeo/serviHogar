@@ -23,7 +23,7 @@ function LogoList({
           key={`${file}-${suffix}`}
           className="flex w-[6.75rem] shrink-0 items-center justify-center md:w-[7.25rem]"
         >
-          <div className="flex h-16 w-full items-center justify-center rounded-2xl bg-white px-3 shadow-[0_1px_3px_rgba(15,23,42,0.06)] ring-1 ring-slate-200/60 transition duration-300 hover:ring-[#2f4fb7]/25 hover:shadow-md md:h-[4.25rem]">
+          <div className="brand-logo-card flex h-16 w-full items-center justify-center rounded-2xl bg-white px-3 shadow-[0_1px_3px_rgba(15,23,42,0.06)] ring-1 ring-slate-200/60 transition duration-300 hover:ring-[#2f4fb7]/25 hover:shadow-md md:h-[4.25rem]">
             <Image
               src={`/img/marcas/${file}`}
               alt={ariaHidden ? "" : nombreVisibleMarca(file)}
@@ -48,7 +48,7 @@ export async function BrandsStrip() {
 
   return (
     <section
-      className="border-t border-slate-200/60 bg-white py-10 md:py-12"
+      className="brands-strip-surface border-t border-slate-200/60 bg-white py-10 md:py-12"
       aria-labelledby="marcas-atendidas-heading"
     >
       <div className="mx-auto max-w-6xl px-4 text-center md:px-5">
@@ -65,11 +65,11 @@ export async function BrandsStrip() {
 
       <div className="relative mt-8 md:mt-10">
         <div
-          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-white to-transparent md:w-20"
+          className="brands-strip-fade-left pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-white to-transparent md:w-20"
           aria-hidden
         />
         <div
-          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-white to-transparent md:w-20"
+          className="brands-strip-fade-right pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-white to-transparent md:w-20"
           aria-hidden
         />
 
