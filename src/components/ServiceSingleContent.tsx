@@ -546,7 +546,7 @@ export function ServiceSingleContent({ servicio }: ServiceSingleContentProps) {
                     </div>
                   </div>
                 </article>
-                <aside className="flex flex-col justify-center rounded-2xl border border-[#2f4fb7]/20 bg-gradient-to-br from-[#f8f9ff] to-white p-6 md:p-7">
+                <aside className="service-zone-surface flex flex-col justify-center rounded-2xl border border-[#2f4fb7]/20 bg-gradient-to-br from-[#f8f9ff] to-white p-6 md:p-7">
                   <p className="text-sm font-semibold uppercase tracking-wide text-[#2f4fb7]">En tu zona</p>
                   <p className="mt-2 text-base leading-relaxed text-slate-700">{servicio.seoLocal}</p>
                 </aside>
