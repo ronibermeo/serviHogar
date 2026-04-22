@@ -114,21 +114,6 @@ export const siteConfig = {
         "Brindamos reparación de estufas en Cali con enfoque en seguridad y funcionamiento estable.",
     },
     {
-      id: "hornos",
-      nombre: "Hornos",
-      resumen: "Revisión y reparación de hornos empotrables y convencionales.",
-      intencion: "Recupera temperatura exacta y cocción pareja.",
-      cta: "Agendar revisión",
-      detalleTitulo: "Servicio técnico de hornos en Cali",
-      detalleDescripcion:
-        "Si tu horno no calienta, quema los alimentos o tarda en alcanzar temperatura, realizamos diagnóstico integral de resistencia, termostato y control electrónico.",
-      fallasComunes: ["No calienta", "Temperatura inestable", "Puerta no sella", "Apagado repentino"],
-      soluciones:
-        "Reparación, calibración térmica y mantenimiento preventivo para prolongar la vida útil del equipo.",
-      seoLocal:
-        "Agenda reparación de hornos a domicilio en Cali con atención clara, profesional y garantizada.",
-    },
-    {
       id: "microondas",
       nombre: "Microondas",
       resumen: "Diagnóstico de microondas que no calientan o hacen ruido.",
@@ -157,21 +142,6 @@ export const siteConfig = {
         "Mantenimiento, reparación del sistema de ventilación e instalación correcta del equipo.",
       seoLocal:
         "Atendemos campanas extractoras en Cali con soporte a domicilio y servicio puntual.",
-    },
-    {
-      id: "freidoras-de-aire",
-      nombre: "Freidoras de Aire",
-      resumen: "Reparación técnica para freidoras de aire domésticas.",
-      intencion: "Recupera potencia térmica y tiempos de cocción estables.",
-      cta: "Agendar revisión",
-      detalleTitulo: "Reparación de freidoras de aire en Cali",
-      detalleDescripcion:
-        "Diagnosticamos freidoras que no encienden, no calientan correctamente o muestran errores en pantalla. Revisamos resistencias, ventilación y panel digital.",
-      fallasComunes: ["No enciende", "No calienta", "Error en panel", "Apagado automático"],
-      soluciones:
-        "Mantenimiento interno y reparación de componentes para uso seguro y continuo.",
-      seoLocal:
-        "Ofrecemos servicio técnico de freidoras de aire en Cali con atención rápida y garantía.",
     },
     {
       id: "dispensadores-de-agua",
@@ -302,7 +272,7 @@ export const siteConfig = {
       nombre: "Andrés Castaño",
       zona: "Valle del Lili",
       comentario:
-        "Servicio muy ordenado y amable. Repararon el horno de mi apartamento y dejaron todo probado antes de retirarse.",
+        "Servicio muy ordenado y amable. Repararon la estufa de mi apartamento y dejaron todo probado antes de retirarse.",
     },
     {
       nombre: "Paula Londoño",
@@ -323,9 +293,9 @@ export const siteConfig = {
         "Realizamos reparación, mantenimiento e instalación de electrodomésticos. El objetivo es resolver la falla y dejar recomendaciones para evitar reincidencias.",
     },
     {
-      pregunta: "¿Trabajan los 15 tipos de electrodomésticos indicados?",
+      pregunta: "¿Trabajan los 13 tipos de electrodomésticos indicados?",
       respuesta:
-        "Sí. Atendemos exactamente los 15 servicios publicados en esta página: desde neveras y lavadoras hasta aire acondicionado y televisores.",
+        "Sí. Atendemos exactamente los 13 servicios publicados en esta página: desde neveras y lavadoras hasta aire acondicionado y televisores.",
     },
     {
       pregunta: "¿La visita técnica tiene costo?",
