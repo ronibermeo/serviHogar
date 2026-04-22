@@ -20,6 +20,9 @@ const faqs = [
 export const metadata: Metadata = {
   title: `FAQ | ${siteConfig.nombreEmpresa}`,
   description: "Respuestas rápidas sobre cobertura, tiempos y solicitud de servicio técnico.",
+  alternates: {
+    canonical: "/preguntas-frecuentes",
+  },
 };
 
 export default function PreguntasFrecuentesPage() {

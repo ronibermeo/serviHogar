@@ -5,6 +5,9 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: `Cobertura | ${siteConfig.nombreEmpresa}`,
   description: `Conoce la cobertura de atención técnica a domicilio en ${siteConfig.ciudadPrincipal}.`,
+  alternates: {
+    canonical: "/cobertura",
+  },
 };
 
 export default function CoberturaPage() {

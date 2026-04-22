@@ -36,28 +36,33 @@ const themeInitScript = `
 `;
 
 export const metadata: Metadata = {
-  title: "Servicio técnico de electrodomésticos a domicilio en Medellín | ServiHogar Técnico",
+  metadataBase: new URL(siteConfig.siteUrl),
+  alternates: {
+    canonical: "/",
+  },
+  title: `Servicio técnico de electrodomésticos a domicilio en ${siteConfig.ciudadPrincipal} | ${siteConfig.nombreEmpresa}`,
   description:
-    "Reparación, mantenimiento e instalación de electrodomésticos a domicilio en Medellín. Agenda por WhatsApp, llamada o formulario con atención rápida y garantía.",
+    `Reparación, mantenimiento e instalación de electrodomésticos a domicilio en ${siteConfig.ciudadPrincipal}. Agenda por WhatsApp, llamada o formulario con atención rápida y garantía.`,
   keywords: [
-    "servicio técnico de electrodomésticos en Medellín",
-    "reparación de neveras en Medellín",
+    `servicio técnico de electrodomésticos en ${siteConfig.ciudadPrincipal}`,
+    `reparación de neveras en ${siteConfig.ciudadPrincipal}`,
     "reparación de lavadoras a domicilio",
     "mantenimiento de aire acondicionado",
     "instalación de calentadores",
     "reparación de televisores",
   ],
   openGraph: {
-    title: "Servicio técnico de electrodomésticos en Medellín",
+    title: `Servicio técnico de electrodomésticos en ${siteConfig.ciudadPrincipal}`,
     description:
       "Agenda tu visita técnica por WhatsApp o formulario. Atención a domicilio con técnicos certificados.",
     type: "website",
     locale: "es_CO",
     siteName: siteConfig.nombreEmpresa,
+    url: siteConfig.siteUrl,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Servicio técnico de electrodomésticos en Medellín",
+    title: `Servicio técnico de electrodomésticos en ${siteConfig.ciudadPrincipal}`,
     description:
       "Reparación, mantenimiento e instalación con atención rápida a domicilio y soporte por WhatsApp.",
   },

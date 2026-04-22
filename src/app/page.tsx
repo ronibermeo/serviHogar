@@ -5,6 +5,12 @@ import { SiteFrame } from "@/components/SiteFrame";
 import { TrustSection } from "@/components/TrustSection";
 import { siteConfig } from "@/config/site";
 
+export const metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
+
 export default function Home() {
   const localBusinessSchema = {
     "@context": "https://schema.org",

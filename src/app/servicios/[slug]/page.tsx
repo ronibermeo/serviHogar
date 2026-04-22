@@ -23,6 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${servicio.nombre} en ${siteConfig.ciudadPrincipal} | ${siteConfig.nombreEmpresa}`,
     description: `${servicio.resumen} ${servicio.seoLocal}`,
+    alternates: {
+      canonical: `/servicios/${servicio.id}`,
+    },
   };
 }
 

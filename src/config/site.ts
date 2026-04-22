@@ -24,6 +24,7 @@ export type PreguntaFrecuente = {
 
 export const siteConfig = {
   nombreEmpresa: "Marcatecnicos",
+  siteUrl: "https://marcatecnicos.com",
   ciudadPrincipal: "Cali",
   telefono: "3180771016",
   whatsapp: "3180771016",
