@@ -5,21 +5,21 @@ import { siteConfig } from "@/config/site";
 const faqs = [
   {
     q: "¿Atienden a domicilio?",
-    a: "Si, atendemos directamente en domicilio para agilizar diagnostico y solucion.",
+    a: "Sí, atendemos directamente en domicilio para agilizar diagnóstico y solución.",
   },
   {
-    q: "¿Cuanto tarda la atencion?",
-    a: "Normalmente atendemos el mismo dia o al siguiente, segun disponibilidad.",
+    q: "¿Cuánto tarda la atención?",
+    a: "Normalmente atendemos el mismo día o al siguiente, según disponibilidad.",
   },
   {
-    q: "¿Como solicito un tecnico?",
+    q: "¿Cómo solicito un técnico?",
     a: "Puedes llamarnos o escribir por WhatsApp para coordinar de inmediato.",
   },
 ];
 
 export const metadata: Metadata = {
   title: `FAQ | ${siteConfig.nombreEmpresa}`,
-  description: "Respuestas rapidas sobre cobertura, tiempos y solicitud de servicio tecnico.",
+  description: "Respuestas rápidas sobre cobertura, tiempos y solicitud de servicio técnico.",
 };
 
 export default function PreguntasFrecuentesPage() {

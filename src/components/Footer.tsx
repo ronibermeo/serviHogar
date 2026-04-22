@@ -7,7 +7,7 @@ export function Footer() {
         <div>
           <h2 className="text-xl font-black text-slate-900">{siteConfig.nombreEmpresa}</h2>
           <p className="mt-3 text-slate-600">
-            Servicio tecnico de electrodomesticos a domicilio con enfoque en rapidez, confianza y
+            Servicio técnico de electrodomésticos a domicilio con enfoque en rapidez, confianza y
             resultados.
           </p>
         </div>
@@ -47,7 +47,7 @@ export function Footer() {
               Privacidad
             </a>
             <a href="#" className="hover:text-sky-700">
-              Terminos
+              Términos
             </a>
           </div>
         </div>

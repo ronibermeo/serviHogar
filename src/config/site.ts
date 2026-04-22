@@ -144,21 +144,6 @@ export const siteConfig = {
         "Atendemos campanas extractoras en Cali con soporte a domicilio y servicio puntual.",
     },
     {
-      id: "dispensadores-de-agua",
-      nombre: "Dispensadores de Agua",
-      resumen: "Soporte para dispensadores que no enfrían o no calientan.",
-      intencion: "Mantén tu dispensador funcional para casa u oficina.",
-      cta: "Solicitar técnico",
-      detalleTitulo: "Servicio técnico para dispensadores de agua",
-      detalleDescripcion:
-        "Corregimos fallas de temperatura, ruidos y fugas en dispensadores. Incluye limpieza técnica y revisión de sistemas de seguridad para uso diario.",
-      fallasComunes: ["No enfría", "No calienta", "Fugas", "Ruido constante"],
-      soluciones:
-        "Reparación funcional, mantenimiento preventivo e instalación de repuestos compatibles.",
-      seoLocal:
-        "Solicita reparación de dispensadores de agua en Cali y recibe asistencia confiable a domicilio.",
-    },
-    {
       id: "lavavajillas",
       nombre: "Lavavajillas",
       resumen: "Revisión de ciclos, drenaje y limpieza técnica de lavavajillas.",
@@ -293,9 +278,9 @@ export const siteConfig = {
         "Realizamos reparación, mantenimiento e instalación de electrodomésticos. El objetivo es resolver la falla y dejar recomendaciones para evitar reincidencias.",
     },
     {
-      pregunta: "¿Trabajan los 13 tipos de electrodomésticos indicados?",
+      pregunta: "¿Trabajan los 12 tipos de electrodomésticos indicados?",
       respuesta:
-        "Sí. Atendemos exactamente los 13 servicios publicados en esta página: desde neveras y lavadoras hasta aire acondicionado y televisores.",
+        "Sí. Atendemos exactamente los 12 servicios publicados en esta página: desde neveras y lavadoras hasta aire acondicionado y televisores.",
     },
     {
       pregunta: "¿La visita técnica tiene costo?",

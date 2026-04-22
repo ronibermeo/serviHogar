@@ -30,7 +30,7 @@ export function ServiceDetails() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-slate-900">Reparacion, mantenimiento o instalacion</h4>
+                <h4 className="font-semibold text-slate-900">Reparación, mantenimiento o instalación</h4>
                 <p className="mt-2 text-slate-700">{servicio.soluciones}</p>
               </div>
             </div>

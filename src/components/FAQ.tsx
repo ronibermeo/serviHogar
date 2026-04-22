@@ -6,7 +6,7 @@ export function FAQ() {
     <section id="preguntas-frecuentes" className="mx-auto max-w-7xl px-4 py-14 md:px-6">
       <SectionHeading
         title="Preguntas frecuentes"
-        subtitle="Resolvemos las dudas mas comunes antes de agendar tu visita."
+        subtitle="Resolvemos las dudas más comunes antes de agendar tu visita."
       />
       <div className="mt-8 space-y-3">
         {siteConfig.preguntasFrecuentes.map((item) => (

@@ -62,7 +62,7 @@ export function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   const whatsappHref = `https://wa.me/${siteConfig.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(
-    `Hola, quiero solicitar servicio tecnico en ${siteConfig.ciudadPrincipal}.`
+    `Hola, quiero solicitar servicio técnico en ${siteConfig.ciudadPrincipal}.`
   )}`;
 
   useEffect(() => {
@@ -171,7 +171,7 @@ export function Header() {
             className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-200/90 text-slate-600 transition hover:bg-slate-50 md:hidden"
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
-            aria-label={menuOpen ? "Cerrar menu" : "Abrir menu"}
+            aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
           >
             {menuOpen ? (
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

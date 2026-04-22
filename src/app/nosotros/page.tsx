@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: `Nosotros | ${siteConfig.nombreEmpresa}`,
-  description: `Conoce como trabaja ${siteConfig.nombreEmpresa} en ${siteConfig.ciudadPrincipal} para reparacion, mantenimiento e instalacion de electrodomesticos.`,
+  description: `Conoce cómo trabaja ${siteConfig.nombreEmpresa} en ${siteConfig.ciudadPrincipal} para reparación, mantenimiento e instalación de electrodomésticos.`,
 };
 
 export default function NosotrosPage() {

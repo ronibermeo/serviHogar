@@ -8,7 +8,6 @@ export const serviceImageById: Record<ServiceItem["id"], string> = {
   estufas: "/img/estufa-image.avif",
   microondas: "/img/microondas-page.jpg",
   "campanas-extractoras": "/img/campanas_extractoras-page.webp",
-  "dispensadores-de-agua": "/img/dispensador_agua-page.png",
   lavavajillas: "/img/lavavajillas2-page.avif",
   lavadoras: "/img/lavadora-page.jpg",
   secadoras: "/img/secadora-page.jpg",

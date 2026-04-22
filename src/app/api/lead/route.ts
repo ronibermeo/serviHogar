@@ -25,14 +25,14 @@ export async function POST(request: Request) {
 
     if (!nombre || !telefono || !servicio) {
       return NextResponse.json(
-        { ok: false, message: "Completa nombre, telefono y servicio para continuar." },
+        { ok: false, message: "Completa nombre, teléfono y servicio para continuar." },
         { status: 400 }
       );
     }
 
     if (!isValidPhone(telefono)) {
       return NextResponse.json(
-        { ok: false, message: "Ingresa un telefono valido para confirmar la visita." },
+        { ok: false, message: "Ingresa un teléfono válido para confirmar la visita." },
         { status: 400 }
       );
     }
@@ -44,7 +44,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // En produccion, aqui puedes conectar CRM, email, WhatsApp API o base de datos.
+    // En producción, aquí puedes conectar CRM, email, WhatsApp API o base de datos.
     return NextResponse.json({
       ok: true,
       message: "Solicitud registrada correctamente.",

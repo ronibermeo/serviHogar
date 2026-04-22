@@ -17,7 +17,7 @@ function IconPhoneFab({ className }: { className?: string }) {
 export function FloatingContactButtons() {
   const callHref = `tel:${siteConfig.telefono.replace(/\s/g, "")}`;
   const whatsappHref = `https://wa.me/${siteConfig.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(
-    `Hola, deseo agendar un servicio tecnico en ${siteConfig.ciudadPrincipal}.`,
+    `Hola, deseo agendar un servicio técnico en ${siteConfig.ciudadPrincipal}.`,
   )}`;
 
   return (

@@ -2,8 +2,8 @@ import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
 const stats = [
-  { k: "30+", t: "Clientes satisfechos", variant: "dark" as const },
-  { k: "15", t: "Servicios técnicos", variant: "light" as const },
+  { k: "300+", t: "Clientes satisfechos", variant: "dark" as const },
+  { k: "12", t: "Servicios técnicos", variant: "light" as const },
   { k: "7", t: "Días a la semana", variant: "light" as const },
   { k: "1", t: "Objetivo: resolver rápido", variant: "dark" as const },
 ];

@@ -3,8 +3,8 @@ import { SectionHeading } from "@/components/SectionHeading";
 const steps = [
   {
     number: "01",
-    title: "Cuentanos que equipo presenta falla",
-    desc: "Nos compartes el tipo de electrodomestico y una descripcion breve de lo que ocurre.",
+    title: "Cuéntanos qué equipo presenta falla",
+    desc: "Nos compartes el tipo de electrodoméstico y una descripción breve de lo que ocurre.",
   },
   {
     number: "02",
@@ -13,8 +13,8 @@ const steps = [
   },
   {
     number: "03",
-    title: "Recibe diagnostico tecnico a domicilio",
-    desc: "El tecnico evalua el equipo en sitio y te explica opciones, tiempos y costos.",
+    title: "Recibe diagnóstico técnico a domicilio",
+    desc: "El técnico evalúa el equipo en sitio y te explica opciones, tiempos y costes.",
   },
   {
     number: "04",
@@ -28,8 +28,8 @@ export function HowItWorks() {
     <section className="bg-slate-50 py-14">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
-          title="Como funciona nuestro servicio tecnico"
-          subtitle="Un proceso simple para que agendes rapido y recibas atencion confiable."
+          title="Cómo funciona nuestro servicio técnico"
+          subtitle="Un proceso simple para que agendes rápido y recibas atención confiable."
           centered
         />
         <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">

@@ -25,7 +25,7 @@ const pillars = [
 
 export function PrimaryServices() {
   const whatsappHref = `https://wa.me/${siteConfig.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(
-    "Hola, quiero asesoria para servicio tecnico."
+    "Hola, quiero asesoría para servicio técnico."
   )}`;
 
   return (
