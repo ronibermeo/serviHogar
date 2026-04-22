@@ -11,7 +11,7 @@ declare global {
   }
 }
 
-export const googleAdsAwId = process.env.NEXT_PUBLIC_GOOGLE_ADS_AW_ID?.trim() ?? "";
+export const googleAdsAwId = "AW-18052329917";
 export const googleAdsCallLabel = process.env.NEXT_PUBLIC_GOOGLE_ADS_CALL_LABEL?.trim() ?? "";
 export const googleAdsWhatsappLabel = process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_LABEL?.trim() ?? "";
 
