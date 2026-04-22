@@ -97,6 +97,9 @@ export default function RootLayout({
                 window.gtag = gtag;
                 gtag('js', new Date());
                 gtag('config', '${googleAdsAwId}');
+                gtag('config', 'AW-18052329917/0KxACO7S76AcEL3jgqBD', {
+                  'phone_conversion_number': '3180771016'
+                });
               `}
             </Script>
           </>
