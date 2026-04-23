@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Manrope, Playfair_Display } from "next/font/google";
 import Script from "next/script";
-import { googleAdsAwId, isGoogleAdsEnabled } from "@/lib/analytics";
+import { googleAdsAwId, googleAdsPhoneConversionLabel, isGoogleAdsEnabled } from "@/lib/analytics";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
+
+const googleAdsPhoneDigits = siteConfig.telefono.replace(/\s/g, "");
 
 const inter = Inter({
   variable: "--font-inter",
@@ -97,8 +99,8 @@ export default function RootLayout({
                 window.gtag = gtag;
                 gtag('js', new Date());
                 gtag('config', '${googleAdsAwId}');
-                gtag('config', 'AW-18052329917/0KxACO7S76AcEL3jgqBD', {
-                  'phone_conversion_number': '3180771016'
+                gtag('config', '${googleAdsAwId}/${googleAdsPhoneConversionLabel}', {
+                  'phone_conversion_number': '${googleAdsPhoneDigits}'
                 });
               `}
             </Script>

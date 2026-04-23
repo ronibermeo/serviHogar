@@ -12,6 +12,8 @@ declare global {
 }
 
 export const googleAdsAwId = "AW-18052329917";
+/** Etiqueta del fragmento de teléfono (conversión por llamada desde la web). */
+export const googleAdsPhoneConversionLabel = "K-9MCOL17KAcEL3jgqBD";
 export const googleAdsCallLabel = process.env.NEXT_PUBLIC_GOOGLE_ADS_CALL_LABEL?.trim() ?? "";
 export const googleAdsWhatsappLabel = process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_LABEL?.trim() ?? "";
 
