@@ -2,9 +2,9 @@ import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
 const stats = [
-  { k: "300+", t: "Clientes satisfechos", variant: "dark" as const },
+  { k: "Atención", t: "personalizada", variant: "dark" as const },
   { k: "12", t: "Servicios técnicos", variant: "light" as const },
-  { k: "7", t: "Días a la semana", variant: "light" as const },
+  { k: "Lun–Sáb", t: "7:30–17:30", variant: "light" as const },
   { k: "1", t: "Objetivo: resolver rápido", variant: "dark" as const },
 ];
 
@@ -159,11 +159,6 @@ export function TrustSection() {
                   className="h-full w-full object-cover"
                 />
               </div>
-            </div>
-            <div className="absolute -bottom-2 -right-2 hidden h-24 w-24 rounded-full border-4 border-white bg-[#1d3a8f] text-center text-xs font-bold leading-tight text-white shadow-lg sm:flex sm:flex-col sm:items-center sm:justify-center sm:px-2">
-              <span className="text-lg font-black">Desde</span>
-              <span>hace años</span>
-              <span className="mt-0.5 text-[10px] font-semibold opacity-90">en la zona</span>
             </div>
           </div>
         </div>

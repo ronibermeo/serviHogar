@@ -10,13 +10,10 @@ export function TopBar() {
     <div className="bg-slate-900 text-slate-100">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-2 text-sm md:px-6">
         <p>
-          <span className="font-semibold">Ciudad:</span> {siteConfig.ciudadPrincipal}
-        </p>
-        <p>
-          <span className="font-semibold">Horario:</span> {siteConfig.horario}
-        </p>
-        <p>
           <span className="font-semibold">Tel:</span> {siteConfig.telefono}
+        </p>
+        <p>
+          <span className="font-semibold">Correo:</span> {siteConfig.email}
         </p>
         <a
           href={whatsappHref}

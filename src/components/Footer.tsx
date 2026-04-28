@@ -30,9 +30,6 @@ export function Footer() {
           <ul className="mt-3 space-y-2 text-slate-700">
             <li>{siteConfig.telefono}</li>
             <li>{siteConfig.email}</li>
-            <li>{siteConfig.direccion}</li>
-            <li>{siteConfig.horario}</li>
-            <li>{siteConfig.cobertura}</li>
           </ul>
         </div>
       </div>
@@ -40,13 +37,13 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4 text-sm text-slate-600 md:px-6">
           <p>© {new Date().getFullYear()} {siteConfig.nombreEmpresa}. Todos los derechos reservados.</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-sky-700">
+            <a href="/aviso-legal" className="hover:text-sky-700">
               Aviso legal
             </a>
-            <a href="#" className="hover:text-sky-700">
+            <a href="/privacidad" className="hover:text-sky-700">
               Privacidad
             </a>
-            <a href="#" className="hover:text-sky-700">
+            <a href="/terminos" className="hover:text-sky-700">
               Términos
             </a>
           </div>

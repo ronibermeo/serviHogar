@@ -77,28 +77,20 @@ export function AboutLocal() {
             <div className="absolute -bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:w-[min(100%,20rem)]">
               <div className="rounded-2xl border border-white/20 bg-white/95 p-5 shadow-lg backdrop-blur-md">
                 <p className="text-xs font-semibold uppercase tracking-wide text-[#2f4fb7]">
-                  Datos rápidos
+                  Contacto rápido
                 </p>
                 <dl className="mt-3 space-y-2 text-sm text-slate-700">
                   <div className="flex justify-between gap-4 border-b border-slate-100 pb-2">
-                    <dt className="text-slate-500">Ciudad</dt>
-                    <dd className="font-semibold text-slate-900">{siteConfig.ciudadPrincipal}</dd>
-                  </div>
-                  <div className="flex justify-between gap-4 border-b border-slate-100 pb-2">
-                    <dt className="text-slate-500">Cobertura</dt>
-                    <dd className="text-right font-medium text-slate-900">{siteConfig.cobertura}</dd>
-                  </div>
-                  <div className="flex justify-between gap-4 border-b border-slate-100 pb-2">
-                    <dt className="text-slate-500">Horario</dt>
-                    <dd className="text-right font-medium text-slate-900">{siteConfig.horario}</dd>
-                  </div>
-                  <div className="flex justify-between gap-4 pt-1">
                     <dt className="text-slate-500">Teléfono</dt>
                     <dd>
                       <a href={callHref} className="font-semibold text-[#1d3a8f] hover:underline">
                         {siteConfig.telefono}
                       </a>
                     </dd>
+                  </div>
+                  <div className="flex justify-between gap-4 pt-1">
+                    <dt className="text-slate-500">Correo</dt>
+                    <dd className="text-right font-semibold text-[#1d3a8f]">{siteConfig.email}</dd>
                   </div>
                 </dl>
               </div>

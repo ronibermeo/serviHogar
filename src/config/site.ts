@@ -33,7 +33,7 @@ export const siteConfig = {
   horarioCorto: "Lun–sáb · 7:30–17:30",
   cobertura: "Cali y municipios cercanos",
   direccion: "Av. 6N #23N-45, Granada, Cali",
-  email: "agenda@servihogartecnico.com",
+  email: "marcatecnicos@gmail.com",
   descripcionCorta:
     "Servicio técnico de electrodomésticos a domicilio con atención rápida, diagnóstico preciso y garantía por escrito.",
   coberturaZonas: [
@@ -334,6 +334,7 @@ export const siteConfig = {
 export const navItems = [
   { label: "Inicio", href: "/" },
   { label: "Servicios", href: "/#servicios" },
+  { label: "Quiénes somos", href: "/quienes-somos" },
 ];
 
 export const franjasHorario = [
