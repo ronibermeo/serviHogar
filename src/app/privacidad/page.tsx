@@ -22,18 +22,7 @@ export default function PrivacidadPage() {
 
           <div className="mt-8 space-y-6 leading-relaxed text-slate-700">
             <section>
-              <h2 className="text-xl font-bold text-slate-900">1. Responsable del tratamiento</h2>
-              <p className="mt-2">
-                {/* TODO: completar */}
-                [DEBES COMPLETAR: Tu nombre completo como persona natural], identificado con cédula de ciudadanía No.{" "}
-                {/* TODO: completar */}
-                [DEBES COMPLETAR: tu número de cédula], operando bajo el nombre comercial Marcatecnicos. Correo de
-                contacto: marcatecnicos@gmail.com. Teléfono de contacto: 3180771016.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold text-slate-900">2. Datos que recopilamos</h2>
+              <h2 className="text-xl font-bold text-slate-900">1. Datos que recopilamos</h2>
               <p className="mt-2">
                 A través del sitio web www.marcatecnicos.com no recopilamos datos personales de forma automática
                 mediante formularios. El usuario que se comunica por WhatsApp o teléfono comparte voluntariamente su
@@ -43,7 +32,7 @@ export default function PrivacidadPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">3. Finalidad del tratamiento</h2>
+              <h2 className="text-xl font-bold text-slate-900">2. Finalidad del tratamiento</h2>
               <p className="mt-2">
                 Los datos recopilados se usan exclusivamente para coordinar y prestar el servicio técnico solicitado,
                 comunicarnos con el cliente y emitir garantías del servicio.
@@ -51,7 +40,7 @@ export default function PrivacidadPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">4. Derechos del titular</h2>
+              <h2 className="text-xl font-bold text-slate-900">3. Derechos del titular</h2>
               <p className="mt-2">
                 El titular de los datos tiene derecho a conocer, actualizar, rectificar y suprimir su información
                 personal. Para ejercer estos derechos puede escribirnos a marcatecnicos@gmail.com.
@@ -59,12 +48,12 @@ export default function PrivacidadPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">5. Compartición de datos</h2>
+              <h2 className="text-xl font-bold text-slate-900">4. Compartición de datos</h2>
               <p className="mt-2">No vendemos ni compartimos datos personales con terceros con fines comerciales.</p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">6. Cookies</h2>
+              <h2 className="text-xl font-bold text-slate-900">5. Cookies</h2>
               <p className="mt-2">
                 Este sitio puede usar cookies técnicas para el funcionamiento básico del sitio. No usamos cookies de
                 seguimiento publicitario de terceros, salvo las propias de Google Ads cuando el usuario llega desde un
@@ -73,7 +62,7 @@ export default function PrivacidadPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">7. Legislación aplicable</h2>
+              <h2 className="text-xl font-bold text-slate-900">6. Legislación aplicable</h2>
               <p className="mt-2">
                 Esta política se rige por la Ley 1581 de 2012 (Habeas Data) y el Decreto 1377 de 2013 de Colombia.
               </p>
