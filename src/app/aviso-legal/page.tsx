@@ -19,7 +19,7 @@ export default function AvisoLegalPage() {
 
           <div className="mt-8 space-y-6 leading-relaxed text-slate-700">
             <section>
-              <h2 className="text-xl font-bold text-slate-900">1. Titular del sitio</h2>
+              <h2 className="text-xl font-bold text-slate-900">1. Datos de contacto</h2>
               <p className="mt-2">
                 Datos de contacto: Correo: marcatecnicos@gmail.com. Teléfono: 3180771016.
               </p>
