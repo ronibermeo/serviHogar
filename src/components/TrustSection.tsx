@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 
 const stats = [
   { k: "Atención", t: "personalizada", variant: "dark" as const },
-  { k: "12", t: "Servicios técnicos", variant: "light" as const },
+  { k: "12", t: "técnicos", variant: "light" as const },
   { k: "Lun–Sáb", t: "7:30–17:30", variant: "light" as const },
   { k: "1", t: "Objetivo: resolver rápido", variant: "dark" as const },
 ];
@@ -123,7 +123,7 @@ export function TrustSection() {
                     className="rounded-3xl border border-slate-200/80 bg-[#eef2ff] px-5 py-6 shadow-sm"
                   >
                     <p className="text-3xl font-black tracking-tight text-[#1d3a8f] md:text-4xl">{stat.k}</p>
-                    <p className="mt-1 text-sm font-medium text-slate-700">{stat.t}</p>
+                    <p className="mt-1 text-sm font-medium text-[#1d3a8f]">{stat.t}</p>
                   </article>
                 )
               )}
