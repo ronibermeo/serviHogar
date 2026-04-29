@@ -21,9 +21,7 @@ export default function AvisoLegalPage() {
             <section>
               <h2 className="text-xl font-bold text-slate-900">1. Titular del sitio</h2>
               <p className="mt-2">
-                {/* TODO: completar */}
-                [DEBES COMPLETAR: Tu nombre completo], persona natural, operando bajo el nombre comercial
-                Marcatecnicos. Correo: marcatecnicos@gmail.com. Teléfono: 3180771016.
+                Datos de contacto: Correo: marcatecnicos@gmail.com. Teléfono: 3180771016.
               </p>
             </section>
 
