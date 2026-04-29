@@ -32,7 +32,7 @@ export const siteConfig = {
   /** Etiqueta corta para UI compacta (p. ej. tarjetas en móvil). */
   horarioCorto: "Lun–sáb · 7:30–17:30",
   cobertura: "Cali y municipios cercanos",
-  direccion: "Av. 6N #23N-45, Granada, Cali",
+  direccion: "CL 60 # 98 F",
   email: "marcatecnicos@gmail.com",
   descripcionCorta:
     "Servicio técnico de electrodomésticos a domicilio con atención rápida, diagnóstico preciso y garantía por escrito.",
