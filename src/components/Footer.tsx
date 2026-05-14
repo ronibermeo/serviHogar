@@ -36,7 +36,7 @@ export function Footer() {
           <ul className="mt-3 space-y-2 text-slate-700">
             <li>
               <span className="font-medium text-slate-900">Dirección:</span> {siteConfig.direccion},{" "}
-              {siteConfig.ciudadPrincipal}
+              {legalIdentity.ciudad}, {legalIdentity.departamento}
             </li>
             <li>
               <a href={telHref} className="hover:text-sky-700">

@@ -3,7 +3,7 @@ import { Hero } from "@/components/Hero";
 import { ServiceGrid } from "@/components/ServiceGrid";
 import { SiteFrame } from "@/components/SiteFrame";
 import { TrustSection } from "@/components/TrustSection";
-import { siteConfig } from "@/config/site";
+import { legalIdentity, siteConfig } from "@/config/site";
 
 export const metadata = {
   alternates: {
@@ -23,7 +23,8 @@ export default function Home() {
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.direccion,
-      addressLocality: siteConfig.ciudadPrincipal,
+      addressLocality: legalIdentity.ciudad,
+      addressRegion: legalIdentity.departamento,
       addressCountry: "CO",
     },
     areaServed: siteConfig.cobertura,
