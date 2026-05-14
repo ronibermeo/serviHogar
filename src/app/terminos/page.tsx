@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFrame } from "@/components/SiteFrame";
-import { getDireccionOperadorCompleta, legalIdentity, siteConfig } from "@/config/site";
+import { legalIdentity, siteConfig } from "@/config/site";
 
 const fechaActualizacion = "14 de mayo de 2026";
 
@@ -26,10 +26,10 @@ export default function TerminosPage() {
               <p className="mt-2">
                 El sitio web y el servicio técnico ofrecido bajo el nombre {siteConfig.nombreEmpresa} (también
                 referido como {legalIdentity.marcaCopyright} en piezas de comunicación) son prestados por{" "}
-                <strong>{legalIdentity.titularNombreCompleto}</strong>, {legalIdentity.titularTipo} con actividad en{" "}
-                {legalIdentity.ubicacionLarga}. No existe una persona jurídica, NIT ni razón social distinta de la
-                identidad indicada; la prestación del servicio es en carácter personal. Dirección de referencia del
-                operador: {getDireccionOperadorCompleta()}.
+                <strong>{legalIdentity.titularNombreCompleto}</strong>, persona natural con actividad en{" "}
+                {legalIdentity.ubicacionLarga}. No existe una persona jurídica, NIT ni razón social distinta
+                de la identidad indicada: la prestación del servicio es en carácter personal y la responsabilidad
+                comercial corresponde a la misma persona natural.
               </p>
             </section>
 
@@ -58,6 +58,10 @@ export default function TerminosPage() {
                 lugar se realiza el diagnóstico y se informa el alcance y costo antes de ejecutar reparaciones que lo
                 requieran. Cuando corresponda, se entrega garantía por escrito sobre mano de obra y piezas instaladas,
                 con las condiciones acordadas en cada caso.
+              </p>
+              <p className="mt-2">
+                Si debes cancelar o reprogramar, avisa con la mayor antelación posible por el mismo canal utilizado
+                para agendar, para liberar el cupo y reorganizar la agenda.
               </p>
             </section>
 
@@ -88,6 +92,28 @@ export default function TerminosPage() {
             <section>
               <h2 className="text-xl font-bold text-slate-900">8. Ley aplicable</h2>
               <p className="mt-2">Estos términos se rigen por las leyes de la República de Colombia.</p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-slate-900">9. Datos de contacto del titular</h2>
+              <p className="mt-2">
+                Correo:{" "}
+                <a className="text-sky-800 underline-offset-2 hover:underline" href={`mailto:${siteConfig.email}`}>
+                  {siteConfig.email}
+                </a>
+                . Teléfono y WhatsApp:{" "}
+                <a
+                  className="text-sky-800 underline-offset-2 hover:underline"
+                  href={`tel:${siteConfig.telefono.replace(/\s/g, "")}`}
+                >
+                  {siteConfig.telefono}
+                </a>
+                . Página de contacto:{" "}
+                <a className="text-sky-800 underline-offset-2 hover:underline" href="/contacto">
+                  Contacto
+                </a>
+                .
+              </p>
             </section>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFrame } from "@/components/SiteFrame";
-import { getDireccionOperadorCompleta, legalIdentity, siteConfig } from "@/config/site";
+import { legalIdentity, siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: `Aviso Legal | ${siteConfig.nombreEmpresa}`,
@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 };
 
 export default function AvisoLegalPage() {
-  const telDigits = siteConfig.telefono.replace(/\s/g, "");
   return (
     <SiteFrame>
       <section className="bg-white">
@@ -26,16 +25,7 @@ export default function AvisoLegalPage() {
                 son responsabilidad de <strong>{legalIdentity.titularNombreCompleto}</strong>, {legalIdentity.titularTipo}{" "}
                 en {legalIdentity.ubicacionLarga}. El nombre {legalIdentity.marcaCopyright} se usa en piezas legales y de
                 pie de página para identificar la misma actividad. No se declara la existencia de una persona jurídica
-                distinta; la prestación es en carácter personal por la persona indicada.
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                <span className="font-semibold text-slate-800">Dirección de referencia del operador:</span>{" "}
-                {getDireccionOperadorCompleta()}.
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                Los datos de identificación tributaria (NIT) para facturación, cuando apliquen, se facilitan bajo
-                solicitud por correo electrónico a {siteConfig.email}, de modo que coincidan con la información fiscal
-                registrada y no generen contradicción con la verificación del anunciante.
+                distinta ni de un NIT empresarial asociado a este aviso.
               </p>
             </section>
 
@@ -47,7 +37,7 @@ export default function AvisoLegalPage() {
                   {siteConfig.email}
                 </a>
                 . Teléfono / WhatsApp:{" "}
-                <a className="text-sky-800 underline-offset-2 hover:underline" href={`tel:${telDigits}`}>
+                <a className="text-sky-800 underline-offset-2 hover:underline" href={`tel:${siteConfig.telefono.replace(/\s/g, "")}`}>
                   {siteConfig.telefono}
                 </a>
                 .

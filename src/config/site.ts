@@ -37,6 +37,10 @@ export const legalIdentity = {
   get ubicacionCorta() {
     return `${this.ciudad}, ${this.pais}`;
   },
+  /** Marca comercial + titular + ubicación (sin año; anteponer «© año» en UI si aplica). */
+  get atribucionOperador() {
+    return `${this.marcaCopyright} – Operado por ${this.titularNombreCompleto}, ${this.titularTipo} en ${this.ciudad}, ${this.departamento}, ${this.pais}`;
+  },
 } as const;
 
 export const siteConfig = {
@@ -362,21 +366,6 @@ export const franjasHorario = [
   "2:00 p.m. - 4:00 p.m.",
   "4:00 p.m. - 6:00 p.m.",
 ];
-
-/**
- * Dirección de referencia del operador (calle + ciudad + departamento + país).
- * Misma cadena en pie de página, contacto, aviso legal y políticas.
- */
-export function getDireccionOperadorCompleta(): string {
-  return `${siteConfig.direccion}, ${legalIdentity.ciudad}, ${legalIdentity.departamento}, ${legalIdentity.pais}`;
-}
-
-/**
- * Línea de copyright y titularidad para el pie (coherente con verificación de anunciante en Google Ads).
- */
-export function getLineaCopyrightOperador(year: number): string {
-  return `© ${year} ${legalIdentity.marcaCopyright} – Operado por ${legalIdentity.titularNombreCompleto}, ${legalIdentity.titularTipo} en ${legalIdentity.ubicacionLarga}.`;
-}
 
 export function getServiceById(id: string) {
   return siteConfig.servicios.find((servicio) => servicio.id === id);

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { SiteFrame } from "@/components/SiteFrame";
 import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
-import { getDireccionOperadorCompleta, legalIdentity, siteConfig } from "@/config/site";
+import { legalIdentity, siteConfig } from "@/config/site";
 import { whatsappSolidButton } from "@/config/whatsappUi";
 
 export const metadata: Metadata = {
@@ -25,39 +25,32 @@ export default function ContactoPage() {
         <div className="mx-auto max-w-4xl px-4 py-10 md:px-6 md:py-14">
           <h1 className="text-3xl font-black tracking-tight text-slate-900 md:text-4xl">Contacto</h1>
           <p className="mt-3 text-slate-600">
-            Coordinación de visitas y cotizaciones. Responde el mismo canal que uses para escribirnos.
+            Coordinación de visitas y cotizaciones. Responde el mismo canal que uses para escribirnos o llamarnos.
           </p>
 
           <div className="mt-8 space-y-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm text-slate-700">
             <div>
               <h2 className="text-lg font-bold text-slate-900">Responsable del servicio</h2>
               <p className="mt-2 leading-relaxed">
-                {legalIdentity.titularNombreCompleto}, {legalIdentity.titularTipo} en Colombia. Opera el servicio
-                bajo el nombre comercial {siteConfig.nombreEmpresa} / {legalIdentity.marcaCopyright} en{" "}
-                {legalIdentity.ubicacionCorta}.
+                <strong>{legalIdentity.titularNombreCompleto}</strong>, {legalIdentity.titularTipo} en Colombia. Opera
+                el servicio bajo el nombre comercial <strong>{siteConfig.nombreEmpresa}</strong> /{" "}
+                <strong>{legalIdentity.marcaCopyright}</strong>.
               </p>
             </div>
 
             <div>
-              <h2 className="text-lg font-bold text-slate-900">Ubicación y dirección de referencia</h2>
+              <h2 className="text-lg font-bold text-slate-900">Ubicación general</h2>
               <p className="mt-2 leading-relaxed">
-                <strong>{getDireccionOperadorCompleta()}</strong>
+                <strong>{legalIdentity.ubicacionLarga}</strong> (ciudad principal de atención: {siteConfig.ciudadPrincipal}).
               </p>
               <p className="mt-2 text-sm text-slate-600">
-                El servicio técnico se presta principalmente a domicilio en {siteConfig.cobertura}. La dirección indicada
-                corresponde al operador ({legalIdentity.titularNombreCompleto}) y sirve como referencia de ubicación
-                general; el detalle de visita se coordina por los canales de contacto.
+                El servicio es a domicilio; la dirección de referencia en Cali puede indicarse al agendar la visita.
               </p>
             </div>
 
             <div>
-              <h2 className="text-lg font-bold text-slate-900">Datos de facturación (NIT)</h2>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                Si necesita identificación tributaria (NIT) u otros datos fiscales para facturación electrónica o
-                constancias, solicítelos por correo a {siteConfig.email} indicando el motivo. Solo se facilitan datos
-                oficiales vigentes; no se publica un NIT en esta página hasta que corresponda de forma estable a la
-                actividad declarada.
-              </p>
+              <h2 className="text-lg font-bold text-slate-900">Horario de atención</h2>
+              <p className="mt-2 leading-relaxed">{siteConfig.horario}</p>
             </div>
 
             <div>

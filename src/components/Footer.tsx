@@ -1,4 +1,4 @@
-import { getDireccionOperadorCompleta, getLineaCopyrightOperador, navItems, siteConfig } from "@/config/site";
+import { legalIdentity, navItems, siteConfig } from "@/config/site";
 
 const telHref = `tel:${siteConfig.telefono.replace(/\s/g, "")}`;
 const mailHref = `mailto:${siteConfig.email}`;
@@ -12,8 +12,9 @@ export function Footer() {
         <div>
           <h2 className="text-xl font-black text-slate-900">{siteConfig.nombreEmpresa}</h2>
           <p className="mt-3 text-slate-600">
-            Servicio técnico de electrodomésticos a domicilio con enfoque en rapidez, confianza y
-            resultados.
+            Servicio técnico de electrodomésticos a domicilio. Actividad a nombre de{" "}
+            <span className="font-medium text-slate-800">{legalIdentity.titularNombreCompleto}</span> (
+            {legalIdentity.titularTipo}), {legalIdentity.ubicacionLarga}.
           </p>
         </div>
 
@@ -43,16 +44,28 @@ export function Footer() {
                 {siteConfig.email}
               </a>
             </li>
-            <li className="text-sm leading-snug text-slate-600">
-              Dirección de referencia: {getDireccionOperadorCompleta()}
-            </li>
           </ul>
         </div>
       </div>
-      <div className="border-t border-slate-200">
-        <div className="mx-auto max-w-7xl space-y-4 px-4 py-4 md:px-6">
-          <p className="text-sm leading-relaxed text-slate-600">{getLineaCopyrightOperador(year)}</p>
+      <div className="border-t border-slate-200 bg-slate-50/80">
+        <div className="mx-auto max-w-7xl space-y-4 px-4 py-5 md:px-6">
+          <p className="text-sm font-medium leading-relaxed text-slate-800">
+            © {year} {legalIdentity.atribucionOperador}
+          </p>
+          <p className="text-sm leading-relaxed text-slate-700">
+            <span className="font-semibold text-slate-900">Atención al cliente:</span>{" "}
+            <a href={telHref} className="text-sky-800 underline-offset-2 hover:underline">
+              {siteConfig.telefono}
+            </a>
+            {" · "}
+            <a href={mailHref} className="text-sky-800 underline-offset-2 hover:underline">
+              {siteConfig.email}
+            </a>
+          </p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-600">
+            <a href="/quienes-somos" className="hover:text-sky-700">
+              Quiénes somos
+            </a>
             <a href="/contacto" className="hover:text-sky-700">
               Contacto
             </a>

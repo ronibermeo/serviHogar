@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { SiteFrame } from "@/components/SiteFrame";
 import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
-import { getDireccionOperadorCompleta, legalIdentity, siteConfig } from "@/config/site";
+import { legalIdentity, siteConfig } from "@/config/site";
 import { whatsappSolidButton } from "@/config/whatsappUi";
 
 export const metadata: Metadata = {
@@ -24,18 +24,25 @@ export default function QuienesSomosPage() {
         <div className="mx-auto max-w-4xl px-4 py-10 md:px-6 md:py-14">
           <h1 className="text-3xl font-black tracking-tight text-slate-900 md:text-4xl">Quiénes somos</h1>
 
+          <p className="mt-3 max-w-2xl text-slate-600">
+            Información clara sobre quién presta el servicio técnico y cómo trabajamos en {siteConfig.ciudadPrincipal} y
+            alrededores.
+          </p>
+
           <div className="mt-8 space-y-8 text-slate-700">
             <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="text-xl font-bold text-slate-900">Titular del servicio</h2>
               <p className="mt-3 leading-relaxed">
-                Este sitio y el servicio técnico anunciado como {siteConfig.nombreEmpresa} ({legalIdentity.marcaCopyright}{" "}
-                en comunicaciones comerciales) los opera <strong>{legalIdentity.titularNombreCompleto}</strong>,{" "}
-                <strong>{legalIdentity.titularTipo}</strong> residente en {legalIdentity.ubicacionLarga}. No se trata de
-                una sociedad ni de una razón social distinta: la atención y la responsabilidad frente al cliente recaen
-                en la misma persona natural verificable.
+                El servicio técnico que ves en este sitio como <strong>{siteConfig.nombreEmpresa}</strong> (nombre
+                comercial) y como <strong>{legalIdentity.marcaCopyright}</strong> en textos legales lo presta{" "}
+                <strong>{legalIdentity.titularNombreCompleto}</strong>, <strong>{legalIdentity.titularTipo}</strong> en{" "}
+                <strong>Colombia</strong>, con actividad en <strong>{legalIdentity.ubicacionLarga}</strong>. No
+                representamos una sociedad, una razón social ni un NIT empresarial: la relación con el cliente es con la
+                misma persona natural que coordina las visitas y la facturación cuando corresponde.
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                <span className="font-semibold text-slate-800">Dirección de referencia:</span> {getDireccionOperadorCompleta()}.
+              <p className="mt-3 leading-relaxed">
+                Esta identificación debe coincidir con el titular asociado a medios de pago y a la actividad comercial
+                anunciada, para que no haya duda sobre quién responde por el servicio.
               </p>
             </section>
 

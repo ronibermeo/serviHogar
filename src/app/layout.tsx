@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Servicio técnico de electrodomésticos en ${siteConfig.ciudadPrincipal}`,
     description:
-      "Agenda tu visita técnica por WhatsApp o formulario. Atención a domicilio con técnicos certificados.",
+      "Agenda tu visita técnica por WhatsApp o formulario. Atención a domicilio con diagnóstico claro y coordinación directa.",
     type: "website",
     locale: "es_CO",
     siteName: siteConfig.nombreEmpresa,

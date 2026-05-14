@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFrame } from "@/components/SiteFrame";
-import { getDireccionOperadorCompleta, legalIdentity, siteConfig } from "@/config/site";
+import { legalIdentity, siteConfig } from "@/config/site";
 
 const fechaActualizacion = "14 de mayo de 2026";
 
@@ -25,12 +25,23 @@ export default function PrivacidadPage() {
               <h2 className="text-xl font-bold text-slate-900">1. Responsable del tratamiento</h2>
               <p className="mt-2">
                 El responsable del tratamiento de los datos personales obtenidos a través de este sitio y de los
-                canales asociados es <strong>{legalIdentity.titularNombreCompleto}</strong>, {legalIdentity.titularTipo}{" "}
-                en Colombia, quien opera el servicio bajo el nombre {siteConfig.nombreEmpresa} / {legalIdentity.marcaCopyright}.
-                Domicilio y dirección de referencia del responsable: {getDireccionOperadorCompleta()}. Para ejercer
-                derechos de habeas data o consultas sobre privacidad puede escribir a{" "}
+                canales asociados (WhatsApp, llamada, formularios) es <strong>{legalIdentity.titularNombreCompleto}</strong>
+                , <strong>{legalIdentity.titularTipo}</strong> en Colombia, con actividad en {legalIdentity.ubicacionLarga}
+                , quien opera el servicio bajo el nombre {siteConfig.nombreEmpresa} / {legalIdentity.marcaCopyright}. No
+                actúa en nombre de una persona jurídica distinta para fines de esta política.
+              </p>
+              <p className="mt-2">
+                Para ejercer derechos de habeas data, consultas sobre privacidad o rectificación de datos puede
+                escribir a{" "}
                 <a className="text-sky-800 underline-offset-2 hover:underline" href={`mailto:${siteConfig.email}`}>
                   {siteConfig.email}
+                </a>{" "}
+                o contactar por teléfono o WhatsApp al{" "}
+                <a
+                  className="text-sky-800 underline-offset-2 hover:underline"
+                  href={`tel:${siteConfig.telefono.replace(/\s/g, "")}`}
+                >
+                  {siteConfig.telefono}
                 </a>
                 .
               </p>

@@ -3,7 +3,7 @@ import { Hero } from "@/components/Hero";
 import { ServiceGrid } from "@/components/ServiceGrid";
 import { SiteFrame } from "@/components/SiteFrame";
 import { TrustSection } from "@/components/TrustSection";
-import { legalIdentity, siteConfig } from "@/config/site";
+import { siteConfig } from "@/config/site";
 
 export const metadata = {
   alternates: {
@@ -16,28 +16,14 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: siteConfig.nombreEmpresa,
-    alternateName: legalIdentity.marcaCopyright,
-    url: siteConfig.siteUrl,
     image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4",
     description: siteConfig.descripcionCorta,
     telephone: siteConfig.telefono,
     email: siteConfig.email,
-    founder: {
-      "@type": "Person",
-      name: legalIdentity.titularNombreCompleto,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: siteConfig.direccion,
-        addressLocality: legalIdentity.ciudad,
-        addressRegion: legalIdentity.departamento,
-        addressCountry: "CO",
-      },
-    },
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.direccion,
       addressLocality: siteConfig.ciudadPrincipal,
-      addressRegion: legalIdentity.departamento,
       addressCountry: "CO",
     },
     areaServed: siteConfig.cobertura,
@@ -53,10 +39,7 @@ export default function Home() {
       name: servicio.nombre,
       description: servicio.resumen,
       areaServed: siteConfig.ciudadPrincipal,
-      provider: {
-        "@type": "Person",
-        name: legalIdentity.titularNombreCompleto,
-      },
+      provider: siteConfig.nombreEmpresa,
     })),
   };
 
