@@ -34,7 +34,7 @@ export default function QuienesSomosPage() {
               <h2 className="text-xl font-bold text-slate-900">Titular del servicio</h2>
               <p className="mt-3 leading-relaxed">
                 El servicio técnico que ves en este sitio como <strong>{siteConfig.nombreEmpresa}</strong> (nombre
-                comercial) y como <strong>{legalIdentity.marcaCopyright}</strong> en textos legales lo presta{" "}
+                comercial) y como <strong>{legalIdentity.marcaCopyright}</strong> lo presta{" "}
                 <strong>{legalIdentity.titularNombreCompleto}</strong>, <strong>{legalIdentity.titularTipo}</strong> en{" "}
                 <strong>Colombia</strong>, con actividad en <strong>{legalIdentity.ubicacionLarga}</strong>. No
                 representamos una sociedad, una razón social ni un NIT empresarial: la relación con el cliente es con la

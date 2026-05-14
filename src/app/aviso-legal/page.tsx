@@ -23,8 +23,8 @@ export default function AvisoLegalPage() {
               <p className="mt-2">
                 El dominio y los contenidos informativos del servicio técnico publicitado como {siteConfig.nombreEmpresa}{" "}
                 son responsabilidad de <strong>{legalIdentity.titularNombreCompleto}</strong>, {legalIdentity.titularTipo}{" "}
-                en {legalIdentity.ubicacionLarga}. El nombre {legalIdentity.marcaCopyright} se usa en piezas legales y de
-                pie de página para identificar la misma actividad. No se declara la existencia de una persona jurídica
+                en {legalIdentity.ubicacionLarga}. El nombre {legalIdentity.marcaCopyright} se usa en el pie de página
+                del sitio para identificar la misma actividad. No se declara la existencia de una persona jurídica
                 distinta ni de un NIT empresarial asociado a este aviso.
               </p>
             </section>
@@ -62,16 +62,7 @@ export default function AvisoLegalPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">5. Exoneración de responsabilidad</h2>
-              <p className="mt-2">
-                La información del sitio es de carácter general. El titular no responde por el uso indebido de la
-                información publicada ni por decisiones tomadas únicamente con base en el contenido web sin
-                confirmación por los canales de contacto.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold text-slate-900">6. Legislación aplicable</h2>
+              <h2 className="text-xl font-bold text-slate-900">5. Legislación aplicable</h2>
               <p className="mt-2">Este aviso se rige por las leyes de la República de Colombia.</p>
             </section>
           </div>
