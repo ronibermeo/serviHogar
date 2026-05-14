@@ -35,6 +35,10 @@ export function Footer() {
           <h3 className="font-bold text-slate-900">Contacto</h3>
           <ul className="mt-3 space-y-2 text-slate-700">
             <li>
+              <span className="font-medium text-slate-900">Dirección:</span> {siteConfig.direccion},{" "}
+              {siteConfig.ciudadPrincipal}
+            </li>
+            <li>
               <a href={telHref} className="hover:text-sky-700">
                 Teléfono / WhatsApp: {siteConfig.telefono}
               </a>

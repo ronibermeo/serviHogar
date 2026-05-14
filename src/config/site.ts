@@ -53,7 +53,7 @@ export const siteConfig = {
   /** Etiqueta corta para UI compacta (p. ej. tarjetas en móvil). */
   horarioCorto: "Lun–sáb · 7:30–17:30",
   cobertura: "Cali y municipios cercanos",
-  direccion: "CL 60 # 98 F",
+  direccion: "CR 112 CL 48-92",
   email: "marcatecnicos@gmail.com",
   descripcionCorta:
     "Servicio técnico de electrodomésticos a domicilio con atención rápida, diagnóstico preciso y garantía por escrito.",
