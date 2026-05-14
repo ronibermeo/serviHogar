@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { SiteFrame } from "@/components/SiteFrame";
-import { siteConfig } from "@/config/site";
+import { getDireccionOperadorCompleta, legalIdentity, siteConfig } from "@/config/site";
 
-const fechaActualizacion = "28 de abril de 2026";
+const fechaActualizacion = "14 de mayo de 2026";
 
 export const metadata: Metadata = {
   title: `Política de Privacidad | ${siteConfig.nombreEmpresa}`,
-  description: "Política de privacidad y tratamiento de datos personales de Marcatecnicos.",
+  description: "Política de privacidad y tratamiento de datos personales del servicio técnico.",
   alternates: {
     canonical: "/privacidad",
   },
@@ -22,49 +22,76 @@ export default function PrivacidadPage() {
 
           <div className="mt-8 space-y-6 leading-relaxed text-slate-700">
             <section>
-              <h2 className="text-xl font-bold text-slate-900">1. Datos que recopilamos</h2>
+              <h2 className="text-xl font-bold text-slate-900">1. Responsable del tratamiento</h2>
               <p className="mt-2">
-                A través del sitio web www.marcatecnicos.com no recopilamos datos personales de forma automática
-                mediante formularios. El usuario que se comunica por WhatsApp o teléfono comparte voluntariamente su
-                nombre, número de teléfono y dirección para coordinar el servicio técnico. No recopilamos datos
-                bancarios ni de pago a través del sitio.
+                El responsable del tratamiento de los datos personales obtenidos a través de este sitio y de los
+                canales asociados es <strong>{legalIdentity.titularNombreCompleto}</strong>, {legalIdentity.titularTipo}{" "}
+                en Colombia, quien opera el servicio bajo el nombre {siteConfig.nombreEmpresa} / {legalIdentity.marcaCopyright}.
+                Domicilio y dirección de referencia del responsable: {getDireccionOperadorCompleta()}. Para ejercer
+                derechos de habeas data o consultas sobre privacidad puede escribir a{" "}
+                <a className="text-sky-800 underline-offset-2 hover:underline" href={`mailto:${siteConfig.email}`}>
+                  {siteConfig.email}
+                </a>
+                .
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">2. Finalidad del tratamiento</h2>
+              <h2 className="text-xl font-bold text-slate-900">2. Datos que recopilamos</h2>
               <p className="mt-2">
-                Los datos recopilados se usan exclusivamente para coordinar y prestar el servicio técnico solicitado,
-                comunicarnos con el cliente y emitir garantías del servicio.
+                <strong>Formulario de agendamiento o contacto en el sitio:</strong> cuando lo usas, podemos recibir
+                nombre, teléfono, tipo de servicio o equipo, fecha y franja preferida de visita, y un mensaje opcional,
+                con la finalidad de coordinar la visita técnica.
+              </p>
+              <p className="mt-2">
+                <strong>WhatsApp y llamada:</strong> si te comunicas por estos medios, nos facilitas de forma voluntaria
+                datos como nombre, teléfono y dirección o barrio para la visita.
+              </p>
+              <p className="mt-2">
+                No recopilamos datos de pago (tarjetas u otros medios) a través de este sitio web.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">3. Derechos del titular</h2>
+              <h2 className="text-xl font-bold text-slate-900">3. Finalidad del tratamiento</h2>
               <p className="mt-2">
-                El titular de los datos tiene derecho a conocer, actualizar, rectificar y suprimir su información
-                personal. Para ejercer estos derechos puede escribirnos a marcatecnicos@gmail.com.
+                Los datos se usan para coordinar y prestar el servicio técnico, contactarte respecto a la visita,
+                emitir información de garantía cuando corresponda y dar respuesta a solicitudes relacionadas con el
+                servicio.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">4. Compartición de datos</h2>
-              <p className="mt-2">No vendemos ni compartimos datos personales con terceros con fines comerciales.</p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold text-slate-900">5. Cookies</h2>
+              <h2 className="text-xl font-bold text-slate-900">4. Derechos del titular</h2>
               <p className="mt-2">
-                Este sitio puede usar cookies técnicas para el funcionamiento básico del sitio. No usamos cookies de
-                seguimiento publicitario de terceros, salvo las propias de Google Ads cuando el usuario llega desde un
-                anuncio.
+                Puedes solicitar acceso, actualización, rectificación o supresión de tus datos cuando la ley lo permita,
+                escribiendo a {siteConfig.email} desde el mismo correo o identificando de forma razonable tu solicitud.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">6. Legislación aplicable</h2>
+              <h2 className="text-xl font-bold text-slate-900">5. Compartición de datos</h2>
               <p className="mt-2">
-                Esta política se rige por la Ley 1581 de 2012 (Habeas Data) y el Decreto 1377 de 2013 de Colombia.
+                No vendemos datos personales. Solo podrían tratarse por proveedores estrictamente necesarios para el
+                funcionamiento del sitio (por ejemplo, hosting), bajo obligaciones de confidencialidad y seguridad
+                acordes a la práctica habitual.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-slate-900">6. Cookies y mediciones</h2>
+              <p className="mt-2">
+                El sitio puede emplear cookies técnicas necesarias para su funcionamiento. Si accedes desde publicidad
+                en Google, pueden aplicarse herramientas de medición de Google (por ejemplo, etiquetas de conversión)
+                según la configuración activa en la campaña.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-slate-900">7. Legislación aplicable</h2>
+              <p className="mt-2">
+                Esta política se interpreta conforme a la Ley 1581 de 2012 y el Decreto 1377 de 2013 de Colombia, en lo
+                pertinente al tratamiento de datos personales.
               </p>
             </section>
           </div>

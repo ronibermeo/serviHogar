@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { SiteFrame } from "@/components/SiteFrame";
 import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
-import { siteConfig } from "@/config/site";
+import { getDireccionOperadorCompleta, legalIdentity, siteConfig } from "@/config/site";
 import { whatsappSolidButton } from "@/config/whatsappUi";
 
 export const metadata: Metadata = {
   title: `Quiénes somos | ${siteConfig.nombreEmpresa}`,
-  description:
-    "Conoce cómo opera Marcatecnicos como servicio técnico independiente en Cali, Colombia.",
+  description: `Servicio técnico a domicilio en ${siteConfig.ciudadPrincipal}: titular, alcance del servicio y forma de trabajo.`,
   alternates: {
     canonical: "/quienes-somos",
   },
@@ -27,23 +26,43 @@ export default function QuienesSomosPage() {
 
           <div className="mt-8 space-y-8 text-slate-700">
             <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h2 className="text-xl font-bold text-slate-900">Somos un servicio técnico independiente</h2>
+              <h2 className="text-xl font-bold text-slate-900">Titular del servicio</h2>
               <p className="mt-3 leading-relaxed">
-                Marcatecnicos es un emprendimiento independiente con sede en Cali, Colombia. Ofrecemos servicio
-                técnico de diagnóstico, reparación y mantenimiento de electrodomésticos a domicilio. No somos el
-                servicio técnico oficial de ninguna marca ni fabricante. No tenemos ninguna relación comercial, de
+                Este sitio y el servicio técnico anunciado como {siteConfig.nombreEmpresa} ({legalIdentity.marcaCopyright}{" "}
+                en comunicaciones comerciales) los opera <strong>{legalIdentity.titularNombreCompleto}</strong>,{" "}
+                <strong>{legalIdentity.titularTipo}</strong> residente en {legalIdentity.ubicacionLarga}. No se trata de
+                una sociedad ni de una razón social distinta: la atención y la responsabilidad frente al cliente recaen
+                en la misma persona natural verificable.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                <span className="font-semibold text-slate-800">Dirección de referencia:</span> {getDireccionOperadorCompleta()}.
+              </p>
+            </section>
+
+            <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="text-xl font-bold text-slate-900">Qué servicio ofrecemos</h2>
+              <p className="mt-3 leading-relaxed">
+                Visitas a domicilio para <strong>diagnóstico, reparación, mantenimiento e instalación</strong> de
+                electrodomésticos en {siteConfig.ciudadPrincipal} y zona cercana. El flujo es sencillo: nos cuentas el
+                equipo y la falla, acordamos visita, revisamos en tu hogar o negocio y te explicamos qué ocurre y qué
+                opciones hay antes de realizar trabajos mayores. Los precios y alcances se comentan con claridad; no
+                usamos lenguaje de “empresa líder” ni promesas que no podamos respaldar en la práctica.
+              </p>
+              <p className="mt-3 leading-relaxed">
+                <strong>No somos el servicio técnico oficial</strong> de ninguna marca ni fabricante. No tenemos
                 afiliación, franquicia ni autorización con Samsung, LG, Whirlpool, Mabe, Haceb, Bosch, Electrolux ni
-                con ningún otro fabricante de electrodomésticos.
+                otros fabricantes; los nombres de marcas en el sitio sirven solo para indicar el tipo de equipo que
+                podemos revisar.
               </p>
             </section>
 
             <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="text-xl font-bold text-slate-900">Cómo operamos</h2>
               <p className="mt-3 leading-relaxed">
-                Recibimos solicitudes de clientes a través de WhatsApp y teléfono, coordinamos una visita a domicilio,
-                realizamos el diagnóstico en el lugar y proponemos la solución con presupuesto claro antes de
-                proceder. Todos nuestros servicios incluyen garantía por escrito sobre mano de obra y piezas
-                instaladas.
+                Recibimos solicitudes por WhatsApp, llamada o formulario web, coordinamos la visita y, en sitio,
+                realizamos el diagnóstico. Si procede la reparación, se acuerda contigo antes de ejecutarla. Cuando
+                aplica, dejamos garantía por escrito sobre mano de obra y piezas instaladas, según lo acordado en cada
+                caso.
               </p>
             </section>
 
@@ -51,10 +70,16 @@ export default function QuienesSomosPage() {
               <h2 className="text-xl font-bold text-slate-900">Contacto</h2>
               <ul className="mt-3 space-y-2 leading-relaxed">
                 <li>
-                  <span className="font-semibold text-slate-900">Teléfono / WhatsApp:</span> 3180771016
+                  <span className="font-semibold text-slate-900">Teléfono / WhatsApp:</span>{" "}
+                  <a className="text-sky-800 underline-offset-2 hover:underline" href={callHref}>
+                    {siteConfig.telefono}
+                  </a>
                 </li>
                 <li>
-                  <span className="font-semibold text-slate-900">Correo:</span> marcatecnicos@gmail.com
+                  <span className="font-semibold text-slate-900">Correo:</span>{" "}
+                  <a className="text-sky-800 underline-offset-2 hover:underline" href={`mailto:${siteConfig.email}`}>
+                    {siteConfig.email}
+                  </a>
                 </li>
               </ul>
 

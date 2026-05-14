@@ -22,9 +22,26 @@ export type PreguntaFrecuente = {
   respuesta: string;
 };
 
+/** Identidad del titular del sitio y del servicio (coherente con verificación en Google Ads). */
+export const legalIdentity = {
+  titularNombreCompleto: "Nathaly Romero Hernandez",
+  titularTipo: "persona natural",
+  ciudad: "Cali",
+  departamento: "Valle del Cauca",
+  pais: "Colombia",
+  /** Texto para línea de copyright / pie legal */
+  marcaCopyright: "Marca Técnicos",
+  get ubicacionLarga() {
+    return `${this.ciudad}, ${this.departamento}, ${this.pais}`;
+  },
+  get ubicacionCorta() {
+    return `${this.ciudad}, ${this.pais}`;
+  },
+} as const;
+
 export const siteConfig = {
   nombreEmpresa: "Marcatecnicos",
-  siteUrl: "https://marcatecnicos.com",
+  siteUrl: "https://www.marcatecnicos.com",
   ciudadPrincipal: "Cali",
   telefono: "3180771016",
   whatsapp: "3180771016",
@@ -335,6 +352,7 @@ export const navItems = [
   { label: "Inicio", href: "/" },
   { label: "Servicios", href: "/#servicios" },
   { label: "Quiénes somos", href: "/quienes-somos" },
+  { label: "Contacto", href: "/contacto" },
 ];
 
 export const franjasHorario = [
@@ -344,6 +362,21 @@ export const franjasHorario = [
   "2:00 p.m. - 4:00 p.m.",
   "4:00 p.m. - 6:00 p.m.",
 ];
+
+/**
+ * Dirección de referencia del operador (calle + ciudad + departamento + país).
+ * Misma cadena en pie de página, contacto, aviso legal y políticas.
+ */
+export function getDireccionOperadorCompleta(): string {
+  return `${siteConfig.direccion}, ${legalIdentity.ciudad}, ${legalIdentity.departamento}, ${legalIdentity.pais}`;
+}
+
+/**
+ * Línea de copyright y titularidad para el pie (coherente con verificación de anunciante en Google Ads).
+ */
+export function getLineaCopyrightOperador(year: number): string {
+  return `© ${year} ${legalIdentity.marcaCopyright} – Operado por ${legalIdentity.titularNombreCompleto}, ${legalIdentity.titularTipo} en ${legalIdentity.ubicacionLarga}.`;
+}
 
 export function getServiceById(id: string) {
   return siteConfig.servicios.find((servicio) => servicio.id === id);

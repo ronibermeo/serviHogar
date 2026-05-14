@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { SiteFrame } from "@/components/SiteFrame";
-import { siteConfig } from "@/config/site";
+import { getDireccionOperadorCompleta, legalIdentity, siteConfig } from "@/config/site";
 
-const fechaActualizacion = "28 de abril de 2026";
+const fechaActualizacion = "14 de mayo de 2026";
 
 export const metadata: Metadata = {
   title: `Términos y Condiciones | ${siteConfig.nombreEmpresa}`,
-  description: "Términos y condiciones de prestación de servicios de Marcatecnicos.",
+  description: "Términos y condiciones de prestación de servicios técnicos a domicilio.",
   alternates: {
     canonical: "/terminos",
   },
@@ -22,57 +22,71 @@ export default function TerminosPage() {
 
           <div className="mt-8 space-y-6 leading-relaxed text-slate-700">
             <section>
-              <h2 className="text-xl font-bold text-slate-900">1. Objeto</h2>
+              <h2 className="text-xl font-bold text-slate-900">1. Identidad del responsable</h2>
               <p className="mt-2">
-                Marcatecnicos presta servicios de diagnóstico, reparación y mantenimiento de electrodomésticos a
-                domicilio en Cali y municipios cercanos.
+                El sitio web y el servicio técnico ofrecido bajo el nombre {siteConfig.nombreEmpresa} (también
+                referido como {legalIdentity.marcaCopyright} en piezas de comunicación) son prestados por{" "}
+                <strong>{legalIdentity.titularNombreCompleto}</strong>, {legalIdentity.titularTipo} con actividad en{" "}
+                {legalIdentity.ubicacionLarga}. No existe una persona jurídica, NIT ni razón social distinta de la
+                identidad indicada; la prestación del servicio es en carácter personal. Dirección de referencia del
+                operador: {getDireccionOperadorCompleta()}.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">2. No somos servicio oficial de ninguna marca</h2>
+              <h2 className="text-xl font-bold text-slate-900">2. Objeto</h2>
               <p className="mt-2">
-                Marcatecnicos es un servicio técnico independiente. No tenemos ninguna afiliación, autorización ni
-                representación con ningún fabricante de electrodomésticos. Los nombres de marcas mencionados en el
-                sitio corresponden a los tipos de equipos que atendemos.
+                Se ofrecen servicios de diagnóstico, reparación, mantenimiento e instalación de electrodomésticos a
+                domicilio en {siteConfig.ciudadPrincipal} y municipios cercanos, según disponibilidad y tipo de
+                equipo.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">3. Proceso del servicio</h2>
+              <h2 className="text-xl font-bold text-slate-900">3. No somos servicio oficial de ninguna marca</h2>
               <p className="mt-2">
-                El cliente solicita el servicio por WhatsApp o teléfono. Se coordina una visita a domicilio. En sitio
-                se realiza el diagnóstico y se presenta el presupuesto. El cliente aprueba antes de proceder con la
-                reparación. El servicio incluye garantía por escrito sobre mano de obra y piezas instaladas.
+                El servicio es independiente. No hay afiliación, autorización ni representación con fabricantes de
+                electrodomésticos. Los nombres de marcas en el sitio son referenciales para describir los equipos que
+                pueden atenderse.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">4. Precios</h2>
+              <h2 className="text-xl font-bold text-slate-900">4. Proceso del servicio técnico</h2>
               <p className="mt-2">
-                Los precios de diagnóstico y reparación se informan antes de ejecutar el trabajo. No se cobra ningún
-                valor sin el consentimiento previo del cliente.
+                El cliente solicita el servicio por WhatsApp, teléfono o formulario web. Se coordina la visita. En el
+                lugar se realiza el diagnóstico y se informa el alcance y costo antes de ejecutar reparaciones que lo
+                requieran. Cuando corresponda, se entrega garantía por escrito sobre mano de obra y piezas instaladas,
+                con las condiciones acordadas en cada caso.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">5. Garantía</h2>
+              <h2 className="text-xl font-bold text-slate-900">5. Precios</h2>
               <p className="mt-2">
-                Ofrecemos garantía por escrito sobre mano de obra y repuestos instalados. El alcance específico se
-                comunica al cliente al momento de realizar el servicio.
+                Los valores de visita, diagnóstico y reparación se comunican antes de proceder. No se cobran trabajos ni
+                conceptos no autorizados por el cliente.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">6. Limitación de responsabilidad</h2>
+              <h2 className="text-xl font-bold text-slate-900">6. Garantía</h2>
               <p className="mt-2">
-                Marcatecnicos no se hace responsable por daños indirectos, lucro cesante ni daños por causas ajenas al
-                servicio prestado.
+                Cuando aplique, la garantía sobre mano de obra y repuestos instalados se documenta de forma clara al
+                momento del servicio, dentro de lo razonable para el tipo de intervención.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">7. Ley aplicable</h2>
+              <h2 className="text-xl font-bold text-slate-900">7. Limitación de responsabilidad</h2>
+              <p className="mt-2">
+                No se responde por daños indirectos, lucro cesante ni daños derivados de causas ajenas al servicio
+                efectivamente prestado, dentro de los límites permitidos por la ley colombiana.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-slate-900">8. Ley aplicable</h2>
               <p className="mt-2">Estos términos se rigen por las leyes de la República de Colombia.</p>
             </section>
           </div>

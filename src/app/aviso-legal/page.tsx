@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import { SiteFrame } from "@/components/SiteFrame";
-import { siteConfig } from "@/config/site";
+import { getDireccionOperadorCompleta, legalIdentity, siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: `Aviso Legal | ${siteConfig.nombreEmpresa}`,
-  description: "Aviso legal del sitio web Marcatecnicos.",
+  description: "Aviso legal e identificación del titular del sitio Marcatecnicos.",
   alternates: {
     canonical: "/aviso-legal",
   },
 };
 
 export default function AvisoLegalPage() {
+  const telDigits = siteConfig.telefono.replace(/\s/g, "");
   return (
     <SiteFrame>
       <section className="bg-white">
@@ -19,41 +20,69 @@ export default function AvisoLegalPage() {
 
           <div className="mt-8 space-y-6 leading-relaxed text-slate-700">
             <section>
-              <h2 className="text-xl font-bold text-slate-900">1. Datos de contacto</h2>
+              <h2 className="text-xl font-bold text-slate-900">1. Titular del sitio</h2>
               <p className="mt-2">
-                Datos de contacto: Correo: marcatecnicos@gmail.com. Teléfono: 3180771016.
+                El dominio y los contenidos informativos del servicio técnico publicitado como {siteConfig.nombreEmpresa}{" "}
+                son responsabilidad de <strong>{legalIdentity.titularNombreCompleto}</strong>, {legalIdentity.titularTipo}{" "}
+                en {legalIdentity.ubicacionLarga}. El nombre {legalIdentity.marcaCopyright} se usa en piezas legales y de
+                pie de página para identificar la misma actividad. No se declara la existencia de una persona jurídica
+                distinta; la prestación es en carácter personal por la persona indicada.
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                <span className="font-semibold text-slate-800">Dirección de referencia del operador:</span>{" "}
+                {getDireccionOperadorCompleta()}.
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                Los datos de identificación tributaria (NIT) para facturación, cuando apliquen, se facilitan bajo
+                solicitud por correo electrónico a {siteConfig.email}, de modo que coincidan con la información fiscal
+                registrada y no generen contradicción con la verificación del anunciante.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">2. Objeto del sitio</h2>
+              <h2 className="text-xl font-bold text-slate-900">2. Datos de contacto</h2>
               <p className="mt-2">
-                Este sitio web tiene como finalidad informar sobre los servicios técnicos de reparación y mantenimiento
-                de electrodomésticos a domicilio que presta Marcatecnicos en Cali y municipios cercanos.
+                Correo:{" "}
+                <a className="text-sky-800 underline-offset-2 hover:underline" href={`mailto:${siteConfig.email}`}>
+                  {siteConfig.email}
+                </a>
+                . Teléfono / WhatsApp:{" "}
+                <a className="text-sky-800 underline-offset-2 hover:underline" href={`tel:${telDigits}`}>
+                  {siteConfig.telefono}
+                </a>
+                .
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">3. Propiedad intelectual</h2>
+              <h2 className="text-xl font-bold text-slate-900">3. Objeto del sitio</h2>
               <p className="mt-2">
-                Los contenidos, textos, imágenes y diseño de este sitio son propiedad de Marcatecnicos o tienen
-                licencia de uso. Los nombres y logos de marcas de fabricantes mostrados en este sitio son propiedad de
-                sus respectivos titulares y se usan únicamente con carácter referencial para indicar los tipos de
-                equipos atendidos. Marcatecnicos no tiene ninguna afiliación oficial con dichas marcas.
+                Este sitio web informa sobre servicios de diagnóstico, reparación y mantenimiento de electrodomésticos a
+                domicilio en {siteConfig.ciudadPrincipal} y municipios cercanos.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">4. Exoneración de responsabilidad</h2>
+              <h2 className="text-xl font-bold text-slate-900">4. Propiedad intelectual</h2>
               <p className="mt-2">
-                Marcatecnicos no se responsabiliza por daños derivados del uso indebido de la información publicada en
-                este sitio.
+                Los textos, imágenes y diseño propios del sitio pertenecen a su titular o se usan con licencia. Los
+                nombres y logotipos de fabricantes son propiedad de sus titulares y aparecen solo con carácter referencial
+                para describir equipos atendidos, sin implicar afiliación oficial.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-slate-900">5. Legislación aplicable</h2>
-              <p className="mt-2">Este aviso se rige por las leyes de Colombia.</p>
+              <h2 className="text-xl font-bold text-slate-900">5. Exoneración de responsabilidad</h2>
+              <p className="mt-2">
+                La información del sitio es de carácter general. El titular no responde por el uso indebido de la
+                información publicada ni por decisiones tomadas únicamente con base en el contenido web sin
+                confirmación por los canales de contacto.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-slate-900">6. Legislación aplicable</h2>
+              <p className="mt-2">Este aviso se rige por las leyes de la República de Colombia.</p>
             </section>
           </div>
         </div>
