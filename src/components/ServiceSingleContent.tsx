@@ -3,7 +3,6 @@ import Link from "next/link";
 import type { ServiceItem } from "@/config/site";
 import { siteConfig } from "@/config/site";
 import { serviceImageById } from "@/config/serviceImages";
-import { BrandsStrip } from "@/components/BrandsStrip";
 import { WhatsAppGlyph } from "@/components/WhatsAppGlyph";
 import { whatsappSolidButton } from "@/config/whatsappUi";
 
@@ -483,16 +482,11 @@ export function ServiceSingleContent({ servicio }: ServiceSingleContentProps) {
             </div>
           </div>
 
-          <BrandsStrip />
-          <div className="mx-auto max-w-6xl px-4 pt-5 md:px-5 md:pt-6">
-            <p className="rounded-2xl border border-slate-200/80 bg-slate-50 px-4 py-3 text-sm leading-relaxed text-slate-600">
-              Marcatecnicos es un servicio técnico independiente. No tenemos ninguna afiliación, autorización ni
-              representación oficial con ninguna de las marcas mencionadas. Los nombres y logos de las marcas son
-              propiedad de sus respectivos fabricantes y se mencionan únicamente para indicar los tipos de equipos que
-              atendemos.
-            </p>
+          <div className="border-t border-slate-200/60 bg-white py-10 md:py-12">
+            <div className="mx-auto max-w-6xl px-4 text-center md:px-5">
+              <p className="text-slate-600">Reparamos equipos de todas las marcas principales</p>
+            </div>
           </div>
-
           <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 md:px-5 md:pb-20 md:pt-4">
             <section className="mt-8 md:mt-10" aria-labelledby="fallas-heading">
               <div className="service-failures-surface rounded-[28px] border border-sky-100/90 bg-gradient-to-b from-white via-sky-50/30 to-[#f0f6ff]/80 p-6 shadow-sm shadow-sky-100/50 md:p-8">
